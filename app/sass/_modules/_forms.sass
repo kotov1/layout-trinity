@@ -1,0 +1,208 @@
+/* ----- Forms ----- */
+
+*::placeholder
+	color: rgba($text-color, .4)
+	opacity: 1
+	@include trs(.1s)
+
+body input:focus:required:invalid, body textarea:focus:required:invalid,
+body input:required:valid, body textarea:required:valid
+	color: $text-color
+
+
+
+
+
+
+.form
+	padding: 46px 60px 60px
+	background-color: $white
+	box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+@include max-screen($sm)
+	.form
+		padding: 30px
+@include max-screen(400px)
+	.form
+		padding: 30px 15px
+		.h3
+			font-size: 24px
+
+
+
+.input-block
+	position: relative
+	&:not(:last-of-type)
+		margin-bottom: 23px
+	&:not(.input-search)
+		.input
+			&:focus, &.populated
+				+ .input-placeholder
+					opacity: 1
+					top: 3px
+
+.input-placeholder
+	position: absolute
+	top: -10px
+	left: 0
+	opacity: 0
+	font-size: 13px
+	color: rgba($black, .4)
+	transition: all 0.2s ease-in-out
+
+.input
+	display: block
+	width: 100%
+	height: 52px
+	min-width: 1px
+	margin: 0 0 18px
+	padding: .9em .5em .1em 0
+	border: none
+	border-bottom: 2px solid $black
+	background-color: $white
+	font-size: 20px
+	line-height: 1
+	@include trs(.1s)
+	&:hover
+		border-color: $accent
+	&:focus
+		outline: none
+		border-color: $accent
+		&::placeholder
+			opacity: 0
+			color: transparent
+
+	&-pass
+		a
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%)
+			font-size: 18px
+			color: $accent
+
+	&-err
+		border-color: #f00
+		+ .input-placeholder
+			color: #f00
+
+@include max-screen($sm)
+	.input
+		font-size: 18px
+
+
+.textarea
+	height: 110px
+	resize: none
+	&.populated
+		&:focus, &.populated
+			+ .input-placeholder
+				top: 0 !important
+		
+
+
+.submit
+	min-width: 164px
+	height: 52px
+	margin-top: 34px
+
+.checkbox 
+	display: flex
+	cursor: pointer
+	margin-top: 
+	margin-bottom: 0
+
+	.checkbox-wrap
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		width: 17px
+		height: 17px
+		flex: 0 0 17px
+		background-color: #f7f7f7
+		&::before
+			content: ''
+			display: block
+			width: 9px
+			height: 9px
+			background: $accent
+			transform: scale(0)
+			transition: all .1s
+
+	.checkbox-text
+		display: inline-block
+		margin-left: 8px
+		opacity: 0.5
+		font-size: 14px
+			
+	input
+		&:checked
+			+ .checkbox-wrap
+				&::before
+					transform: scale(1)
+
+.checkbox-hidden
+	display: none
+
+
+
+.modal
+	max-width: 477px
+	margin: 0 auto
+	position: relative
+	opacity: 0
+	transform: translate3d(0,-100%,0)
+	animation: modal .4s cubic-bezier(0.7, 0, 0.3, 1) forwards
+
+	&__title
+		text-align: center
+
+	.btn
+		display: flex
+		margin-left: auto
+		margin-right: auto
+		min-width: 164px
+
+	.btn-close
+		top: 25px
+		right: 25px
+
+@keyframes modal
+	0%
+		opacity: 0
+		transform: translate3d(0,-400px,0)
+	100% 
+		opacity: 1
+		transform: translate3d(0,0,0)
+
+@keyframes modal-el
+	0%
+		opacity: 0
+		transform: translate3d(0,-100px,0)
+	100% 
+		opacity: 1
+		transform: translate3d(0,0,0)
+
+.modal-anim-1, .modal-anim-2, .modal-anim-3
+	animation: modal-el .4s forwards
+.modal-anim-1
+	animation-delay: .1s
+.modal-anim-2
+	animation-delay: .15s
+.modal-anim-3
+	animation-delay: .2s
+
+@include max-screen($sm)
+	.modal__title
+		font-size: 40px
+
+
+
+
+
+
+
+
+
+
+
+

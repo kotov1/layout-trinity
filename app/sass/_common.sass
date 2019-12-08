@@ -1,0 +1,462 @@
+/* ------------------------------------- 
+	Common styles 
+	------------------------------------- */
+.main-wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	.page
+		flex: 1
+/* ie */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.main-wrapper
+		display: block
+	
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	&--wide
+		padding-left: 0
+		padding-right: 0
+
+@media (min-width: 576px)
+	.container
+		max-width: 540px
+
+@media (min-width: 768px)
+	.container
+		max-width: 758px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1282px
+	.container--wide
+		max-width: 1504px
+	
+
+
+.flex
+	display: flex
+	flex-wrap: wrap
+
+.f-row
+	display: flex
+	flex-wrap: wrap
+	margin-right: -13px
+	margin-left: -13px
+.cols
+	padding-left: 13px
+	padding-right: 13px
+
+.col-1
+	width: 100%
+.col-1-2
+	width: 50%
+.col-1-3
+	width: 33.33333%
+.col-1-4
+	width: 25%
+.col-3-4
+	width: 75%
+
+.img
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+.text-bold
+	font-weight: 700
+
+.color-accent
+	color: $accent
+
+.list
+	margin: 0
+	padding: 0
+	list-style: none
+
+
+
+
+
+
+/* ---------- Titles & text ---------- */
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: $title-font
+	font-weight: 800
+	letter-spacing: -0.025em 
+
+h1, .h1
+	font-size: 48px
+	line-height: 1.1
+	
+.page-title
+	margin-bottom: .6em
+
+h2, .h2
+	font-size: 38px
+	line-height: 1.05
+.h2
+	margin-bottom: .6em
+
+h3, .h3
+	font-size: 30px
+	line-height: 1.15
+
+
+
+
+.text-1
+	font-size: 26px
+	line-height: 1.4
+	&:not(:last-child)
+		margin-bottom: .7em
+
+.text-2
+	font-size: 18px
+	line-height: 1.35
+
+.no-margins
+	p
+		margin-bottom: 0 !important
+
+
+.text-block
+	padding: 1.9em
+	background-color: $bg-color
+	border-top: 2px solid $accent
+
+.accent-block
+	padding: 1.9em 2.3em
+	color: $white
+	background-color: $accent
+
+
+
+.text-list
+	font-size: 18px
+	li
+		position: relative
+		&:not(:last-child)
+			margin-bottom: .5em
+		&::before
+			position: absolute
+			left: 0
+			z-index: 0
+	
+ul.text-list
+	li
+		padding-left: 2.4em
+		&::before
+			content: ''
+			display: block
+			width: 1.334em
+			height: 2px
+			top: .5em
+			background: $accent
+	
+ol.text-list
+	counter-reset: li
+	li
+		padding-left: 1.8em
+		&::before
+			content: counter(li)'.'
+			counter-increment: li
+			font-weight: 700
+			color: $accent
+			
+
+
+.section-padding
+	padding-top: 65px
+
+.block-padding
+	padding-top: 30px
+
+.bg-section
+	margin-top: 45px
+	padding: 45px 0
+	background-color: $bg-color
+
+.block-col
+	max-width: 930px
+
+.row-col
+	max-width: 860px
+
+.text-col
+	max-width: 700px
+
+
+
+
+
+/* ----- Кнопки ----- */
+.btn
+	display: inline-flex
+	height: 52px
+	align-items: center
+	justify-content: center
+	font-size: 20px
+	line-height: 1
+	background: $accent
+	color: $white
+	position: relative
+	z-index: 1
+	overflow: hidden
+	@include trs(.1s)
+	&::before
+		content: ''
+		position: absolute
+		top: -20px
+		left: 50%
+		transform: translate(-50%, -50%) scale(1)
+		display: block
+		width: 40px
+		height: 40px
+		background: darken($accent, 10)
+		border-radius: 50px
+		transition: 0.2s
+		z-index: -1
+	&:hover::before
+		transform: scale(8.3)
+		transition: 0.4s
+
+
+
+
+.btn-close
+	display: inline-block
+	width: 18px
+	height: 18px
+	background: url('../img/ic-close.svg') no-repeat 50% 50% / 100%
+	opacity: 0.8
+	cursor: pointer
+	&:hover
+		opacity: 1
+	&.mfp-close
+		background: url('../img/ic-close.svg') no-repeat 50% 50% / 100% !important
+
+
+
+// Элементы управления слайдером
+.slick
+	&-arrow
+		font-size: 10px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 5.7em
+		height: 5.7em
+		border: 1px solid $bd-color
+		@include trs(.1s)
+		svg
+			width: 1.2em
+			height: 2.2em
+			@include trs(.1s)
+			svg
+				fill: $accent
+	&-prev
+		transform: rotate(180deg)
+		&:hover
+			box-shadow: -10px -17px 62px rgba(0, 0, 0, 0.09)
+		+ .slick-next
+			margin-left: -1px
+	&-next
+		&:hover
+			box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+
+.slick-dots
+	margin: 0
+	padding: 0
+	list-style: none
+	display: flex !important
+	font-size: 0
+	button
+		display: block
+		width: 9px
+		height: 9px
+		margin: 0 6px
+		border-radius: 50%
+		background: #d8d8d8
+		@include trs(.2s)
+	.slick-active
+		button
+			background: $accent
+
+
+
+
+/* ----- иконки-ссылки соц сети ----- */
+.social
+	&-links
+		display: flex
+		align-items: center
+		li:not(:last-child)
+			margin-right: 30px
+	&-link
+		display: inline-block
+		background-repeat: no-repeat
+		background-size: 100%
+		font-size: 10px
+		&:hover
+			transform: translate3d(0,-.2em,0)
+	&-fb
+		width: 1.3em
+		height: 2.4em
+		background-image: url('../img/ic-fb.svg')
+	&-vk
+		width: 3em
+		height: 1.7em
+		background-image: url('../img/ic-vk.svg')
+
+
+
+
+
+
+
+
+
+
+/* ----- js вкладки ----- */
+.tabs
+	display: flex
+	flex-wrap: wrap
+	.tab
+		margin: 0 30px 15px 0
+.tab
+	display: block
+	padding: .2em .5em
+	color: $accent
+	cursor: pointer
+	@include trs(.1s)
+	span
+		display: inline-block
+		line-height: 1
+		@include trs(.1s)
+		border-bottom: 1px dotted $accent
+	&--active
+		color: $black
+		span
+			border-color: transparent
+		
+		background-color: $bg-color
+.tab-item:not(:first-child)
+	display: none
+
+
+
+/* ----- js аккордион ----- */
+.accordion
+	&-btn
+		position: relative
+		margin-bottom: .3em
+		padding: .5em 2em .5em 1em
+		background-color: $bg-color
+		color: $accent
+		cursor: pointer
+		&.active
+			.accordion-ic
+				&::before
+					opacity: 0
+				&::after
+					transform: rotate(0)
+	&-ic
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 24px
+		height: 24px
+		position: absolute
+		right: 1em
+		top: 50%
+		transform: translateY(-50%)
+		border-radius: 50%
+		border: 2px solid $accent
+		&::before, &::after
+			content: ''
+			display: block
+			width: 70%
+			height: 2px
+			position: absolute
+			background: $accent
+			@include trs(.2s)
+		&::after
+			transform: rotate(90deg)
+	&-content
+		display: none
+		margin-top: -.3em
+		padding: 1.2em 2em 1.5em
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+		position: relative
+		z-index: 1
+
+
+@include max-screen($sm)
+	.accordion-content
+		padding: 20px 15px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.desktop-hidden
+	display: none
+
+
+
+
+@include max-screen($xl)
+	.desktop-hidden
+		display: block
+	.mob-hidden
+		display: none
+
+	.text-block, .accent-block
+		padding: 1.5em
+
+@include max-screen($md)
+	.h3
+		font-size: 34px
+	.text-1
+		font-size: 22px
+	.text-2, .text-list
+		font-size: 16px
+	.section-padding
+		padding-top: 45px
+
+
+@include max-screen($sm)
+	.h1
+		font-size: 42px
+	.text-block, .accent-block
+		padding: 1em
+

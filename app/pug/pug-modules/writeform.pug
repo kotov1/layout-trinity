@@ -1,0 +1,49 @@
+.writeform
+	.container
+		if page == "history"
+			.h2.writeform__title Мы готовы ответить на ваши вопросы
+			.writeform__subtitle.text-1 Оставьте свои данные, и мы свяжемся с вами в ближайшее время.
+		else if page == "en"
+			.h2.writeform__title Write to us
+		else
+			.h2.writeform__title Напишите нам с&nbsp;сайта
+		.writeform__form.form
+
+			if page == "en"
+				form(action="#")
+					.f-row
+						.cols.col-1-2
+							.input-block
+								input.input(type="text", name="name", placeholder="Your name", required)
+								span.input-placeholder Your name
+						.cols.col-1-2
+							.input-block
+								input.input(type="text", name="contact", placeholder="Phone or email", required)
+								span.input-placeholder Phone or email
+					.input-block
+						textarea.textarea.input(name="message", placeholder="Text here")
+						span.input-placeholder Text here
+					label.checkbox
+						input.checkbox-hidden(type='checkbox', name='privacy', checked)
+						span.checkbox-wrap
+						span.checkbox-text I agree to the processing of personal data
+					button.btn.submit Send
+			else
+				form(action="#")
+					.f-row
+						.cols.col-1-2
+							.input-block
+								input.input(type="text", name="name", placeholder="Как вас зовут?", required)
+								span.input-placeholder Как вас зовут?
+						.cols.col-1-2
+							.input-block
+								input.input(type="text", name="contact", placeholder="Телефон или почта", required)
+								span.input-placeholder Телефон или почта
+					.input-block
+						textarea.textarea.input(name="message", placeholder="А вот тут-то мы и напишем!")
+						span.input-placeholder Сообщение
+					label.checkbox
+						input.checkbox-hidden(type='checkbox', name='privacy', checked)
+						span.checkbox-wrap
+						span.checkbox-text Согласен на обработку персональных данных
+					button.btn.submit Отправить

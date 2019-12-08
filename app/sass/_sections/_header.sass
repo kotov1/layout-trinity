@@ -1,0 +1,160 @@
+/* ----- header ----- */
+
+.header
+	padding: 32px 0
+
+	&__line
+		align-items: center
+		
+		.menu-toggle
+			margin-right: 4%
+
+
+.container--wide .header__line 
+	padding: 0 15px
+@media (min-width: 1534px)
+	.container--wide .header__line 
+		padding: 0
+
+.logo
+	width: 159px
+	height: 35px
+	img
+		height: 100%
+
+
+@include max-screen($xl)
+	.header
+		padding: 20px 0
+	.header__line 
+		.logo
+			margin-right: auto
+
+		> .tel-link
+			margin-top: .4em
+
+@include max-screen($sm)
+	.header__line 
+		.logo
+			width: 41%
+			max-width: 160px
+			height: auto
+		.tel-link
+			font-size: 18px
+
+@include max-screen(380px)
+	.header__line 
+		.tel-link
+			font-size: 16px
+
+
+
+
+.tel-link
+	font-size: 20px
+	font-weight: 700
+	letter-spacing: -.025em
+.top-menu .tel-link
+	margin-left: 2%
+
+
+.lang
+	margin-left: 25px
+	font-weight: 700
+	text-transform: uppercase
+
+
+
+.login
+	width: 18px
+	height: 19px
+	cursor: pointer
+.top-menu .login
+	margin-left: 25px
+
+
+
+
+.search
+	display: flex
+	align-items: center
+	position: relative
+	&__toggle
+		font-size: 10px
+		width: 1.8em
+		height: 1.8em
+		cursor: pointer
+	&__form
+		display: none
+		position: absolute
+		width: 440px
+		right: 0
+		.input
+			height: 44px
+			flex: 1
+			max-width: 100%
+			margin: 0
+			padding: .6em .5em .5em 0
+			font-size: 16px
+	&__btn
+		width: 75px
+		height: 44px
+		margin-left: -1px
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 0
+			background: url('../img/ic-search-white.svg') no-repeat 50% 50% / 18px 18px
+	
+	&-expanded
+		.search__form
+			display: block
+
+.top-menu .search
+	margin-left: 25px
+
+
+@include max-screen($md)
+	.top-menu .controls-block .search__form
+		width: 450px
+@include max-screen($sm)
+	.top-menu .controls-block .search__form
+		width: 285px
+
+
+
+
+@import "../_modules/top-menu"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

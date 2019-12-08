@@ -1,0 +1,117 @@
+- var page = "history"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='О компании', href='resheniya.html')
+									span О компании
+							li
+								span История компании
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title История компании
+
+					.history-hero
+						.history-title.h1
+							span.fz-bigger 26
+							span лет безупречной работы на рынке информационных технологий
+
+					.history-block.text-1
+						p В 1993 году Владимир Рудов совместно с Дмитрием Оровым основывают компанию «Тринити».  История «Тринити» — это отражение истории развития рынка информационных технологий в России.  Компания была основана  в Санкт-Петербурге и прошла путь от простой продажи SCSI адаптеров до реализации комплексных проектов по системной интеграции и строительству Центров обработки данных. 
+
+					.timeline
+						.timeline__row
+							.timeline__year.h1 2019
+							.timeline__main.text-1 
+								p ГК Тринити — системный интегратор полного цикла и надежный бизнес-партнер для коммерческих организаций и государственных структур
+							.timeline__sub.text-2 
+								p На текущий момент компания Тринити имеет наивысшие партнерские статусы у ключевых международных вендоров: Fujitsu, Lenovo, IBM, Dell EMC, HP, NetApp, Oracle и  
+									a(href="https://www.trinitygroup.ru/about/partners", target="_blank", title="https://www.trinitygroup.ru/about/partners", rel="noopener") множество других
+						.timeline__row
+							.timeline__year.h1 2018
+							.timeline__main.text-1 
+								p Разработка собственной системы распознавания лиц
+							.timeline__sub.text-2.no-margins
+								p Тринити разработала собственную систему распознавания лиц (видеоидентификации) – Trinity identix.one. 
+								p Тринити отметила 25-летний юбилей компании 
+									a(href="#", target="_blank", rel="noopener") корпоративным выездом в Будапешт
+						.timeline__row
+							.timeline__year.h1 2017
+							.timeline__main.text-1 
+								p 2017 Первая сделка в России и Европе по внедрению решения на базе IBM Watson Explorer
+							.timeline__sub.text-2 
+								p Технология «Trinity Smart Data Analysis» («Тринити Интеллектуальный анализ данных»), разработанная на базе платформы IBM Watson Explorer, внедрена во Всероссийском институте научной и технической информации Российской академии наук (ВИНИТИ РАН) - ведущем аналитическом центре научно-технической информации Российской академии наук.
+						.timeline__row
+							.timeline__year.h1 2016
+							.timeline__main.text-1 
+								p Рейтинг крупнейших ИТ-компаний России 
+							.timeline__sub.text-2.no-margins
+								p Компания Тринити по итогам 2015 года заняла 44 место в рейтинге 100 крупнейших компаний российского ИТ-рынка, подготовленного Аналитическим центром TAdviser
+
+
+
+
+
+
+
+
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

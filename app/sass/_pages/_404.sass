@@ -1,0 +1,47 @@
+/* ------------------------------------- 
+	страница 404
+	------------------------------------- */
+
+.page-error
+
+	&__title
+		line-height: .9
+
+	&-images
+		justify-content: center
+		align-items: center
+		margin-bottom: 65px
+	
+	&-img
+		&:not(:last-child)
+			margin-right: 50px
+
+
+	a
+		color: $accent
+
+
+
+@include max-screen($xl)
+	.page-error__title
+		> *
+			display: inline
+	.page-error-images
+		margin-top: 30px
+	.page-error-subimg
+		display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

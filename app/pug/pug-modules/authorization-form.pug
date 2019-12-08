@@ -1,0 +1,14 @@
+.modal.form.mfp-hide#authorization-form
+	button.btn-close.mfp-close(type="button")
+	.modal__title.h1.modal-anim-1 Вход
+	.modal-anim-2
+		form(action="#")
+			.input-block
+				input.input.input-err(type="text", name="login", placeholder="Логин", required)
+				span.input-placeholder Логин
+			.input-block.input-pass
+				input.input(type="password", name="password", autocomplete="off", placeholder="Пароль", required)
+				span.input-placeholder Пароль
+				a.pass-restore.js-call-restoration(href="#") Забыли?
+			button.btn.btn--color.submit(type="submit") Войти
+

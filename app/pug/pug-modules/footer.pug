@@ -1,0 +1,216 @@
+footer.footer
+
+	.container
+
+
+		.footer__row.flex
+
+			.footer__col.flex
+				.footer__col
+					.links-title Продукты
+					ul.links-list.list
+						li
+							a(href="#") Серверное оборудование
+						li
+							a(href="#") Системы хранения данных
+						li
+							a(href="#") Сетевое оборудование
+						li
+							a(href="#") Программное обеспечение
+
+					.links-title Проекты
+					ul.links-list.list
+						li
+							a(href="#") Госучреждения
+						li
+							a(href="#") Телекоммуникации
+						li
+							a(href="#") Медицина
+						li
+							a(href="#") Торговля
+						li
+							a(href="#") Производство и промышленность
+						li
+							a(href="#") Финансы
+						li
+							a(href="#") ИТ
+
+				.footer__col
+					.links-title Решения
+					ul.links-list.list
+						li
+							a(href="#") Виртуализация
+						li
+							a(href="#") Катастрофоустойчивые решения 
+						li
+							a(href="#") Высокопроизводительные вычисления и VDI
+						li
+							a(href="#") Deep learning и AI
+						li
+							a(href="#") Резервное копирование
+						li
+							a(href="#") Информационная безопасность
+						li
+							a(href="#") Инженерная инфраструктура ЦОД 
+						li
+							a(href="#") Видеонаблюдение 
+						li
+							a(href="#") Телевидение, IPTV / OTT 
+						li
+							a(href="#") Прогнозная аналитика 
+						li
+							a(href="#") СЭД Тринити
+						li
+							a(href="#") Видеоидентификация
+
+			.footer__col.flex
+				.footer__col
+					.links-title О компании
+					ul.links-list.list
+						li
+							a(href="#") Владимир Рудов
+						li
+							a(href="#") История компании
+						li
+							a(href="#") Профиль деятельности
+						li
+							a(href="#") Адреса и реквизиты
+						li
+							a(href="#") Партнеры / Вендоры
+						li
+							a(href="#") Клиенты
+						li
+							a(href="#") Сертификаты
+						li
+							a(href="#") Доставка и Оплата
+						li
+							a(href="#") Лизинг IT
+						li
+							a(href="#") Участие в торгах
+						li
+							a(href="#") Пресс-центр
+						li
+							a(href="#") Мероприятия
+						li
+							a(href="#") Вакансии
+						li
+							a(href="#") Сервисные центры
+				
+				.footer__col
+					.footer__data
+						.footer__label Звонки по России
+						a.footer__tel(href="tel:88002005960") 8 800 200-59-60
+					.footer__data
+						.footer__label Москва
+						a.footer__tel(href="tel:+74952329230") +7 (495) 232-92-30
+						a.footer__email(href="mailto:msk@trinitygroup.ru") msk@trinitygroup.ru
+					.footer__data
+						.footer__label Санкт-Петербург
+						a.footer__tel(href="tel:+78123275960") +7 (812) 327-59-60
+						a.footer__email(href="mailto:spb@trinitygroup.ru") spb@trinitygroup.ru
+					.footer__data
+						.footer__label Екатеринбург
+						a.footer__tel(href="tel:+73433784150") +7 (343) 378-41-50
+						a.footer__email(href="mailto:eburg@trinitygroup.ru") eburg@trinitygroup.ru
+					ul.social-links.list
+						li
+							a.social-link.social-fb(href="#", target="_blank") 
+						li
+							a.social-link.social-vk(href="#", target="_blank") 
+
+
+		ul.footer-nav.flex.list
+			li
+				a(href="#") Конфигуратор серверов
+			li
+				a(href="#") Конфигуратор СХД
+			li
+				a(href="#") Интернет-магазин
+			li
+				a(href="#") Форум 3nity.ru
+			li
+				a(href="#") Блог
+			li
+				a(href="#") Видео
+			li
+				a(href="#") Trinity Lab
+
+
+		.footer-bottom.flex
+			.footer-block.flex
+				.footer-logo
+					img(src="img/logo-white.svg", alt="Тринити")
+
+				.copy &copy; Trinity 2019
+
+			a.privacy-link(href="#") Политика конфиденциальности
+
+			.designer Дизайн сайта — 
+				a(href="http://goga.spb.ru/", target="_blank") goga.spb.ru
+				
+
+
+ 
+// #authorization-form
+include authorization-form
+// /.modal	
+
+
+
+
+// Скрипты
+
+// Jquery 2.1.3 из облака и замена в случае отсутствия доступа к облаку 
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+script.
+	window.jQuery || document.write('<script src="libs/jquery/jquery.min.js"><\/script>')
+
+if slick == true
+	// slick slider js
+	script(src="libs/slick-1.8.1/slick/slick.min.js")
+
+// magnific popup js
+script(src="libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+
+// общие
+script(src="js/common.js")
+
+if partners_slider == true
+	// компоненты
+	script(src="js/components/partners-slider.js")
+
+if page == "main"
+	// страница
+	script(src="js/mainpage.js")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+head
+
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="description" content="")
+	meta(name="author" content="")
+
+	link(rel='apple-touch-icon', sizes='152x152', href='img/favicon/apple-touch-icon.png')
+	link(rel='icon', type='image/png', sizes='32x32', href='img/favicon/favicon-32x32.png')
+	link(rel='icon', type='image/png', sizes='16x16', href='img/favicon/favicon-16x16.png')
+	link(rel='manifest', href='img/favicon/site.webmanifest')
+	link(rel='mask-icon', href='img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+	link(rel='shortcut icon', href='img/favicon/favicon.ico')
+	meta(name='msapplication-TileColor', content='#2b5797')
+	meta(name='msapplication-config', content='img/favicon/browserconfig.xml')
+	meta(name='theme-color', content='#ffffff')
+
+
+	- var currentPage = page
+	case currentPage
+		when "main"
+			title Тринити - Главная
+		when "resheniya"
+			title Тринити - Решения
+		when "virtualizatsiya-serverov"
+			title Тринити - Виртуализация серверов
+		when "virtualizatsiya-sistem-hraneniya"
+			title Тринити - Виртуализация систем хранения 
+		when "history"
+			title Тринити - История компании
+		when "404"
+			title Тринити - Страница ошибки
+		when "en"
+			title Trinity
+		default 
+			title Тринити
+	
+	// Стили
+
+	if slick == true
+		// slick slider css
+		link(rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css")
+	
+	// magnific popup css
+	link(rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css")
+
+	// общие 
+	link(rel="stylesheet" href="css/styles.css")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

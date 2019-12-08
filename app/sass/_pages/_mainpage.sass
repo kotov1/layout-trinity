@@ -1,0 +1,655 @@
+/* ------------------------------------- 
+	Главная
+	------------------------------------- */
+
+
+/* ----- Первый экран ----- */
+.hero
+	padding: 122px 0 125px
+	background: url('../img/decor-hero.png'), linear-gradient(135deg, #0b6196, #0274ba)
+	background-repeat: no-repeat
+	background-position: 100% 100%, 0 0
+	color: $white
+	position: relative
+	&::before, &::after
+		content: ''
+		display: block
+		font-size: 10px
+		position: absolute
+		bottom: 90px
+		z-index: 0
+		background-repeat: no-repeat
+		background-position: 0 0
+		background-size: 100%
+	&::before
+		width: 22em
+		height: 13.7em
+		right: 16em
+		background-image: url('../img/el-hero-bg-1.jpg')
+	&::after
+		width: 13.8em
+		height: 13.7em
+		right: 0
+		background-image: url('../img/el-hero-bg-2.jpg')
+	&__content
+		max-width: 51%
+	&__title 
+		font-size: 110px
+		margin-bottom: .3em
+		letter-spacing: 0
+		span
+			display: inline-block
+			position: relative
+			line-height: .8
+			z-index: 1
+			&::after
+				content: ''
+				display: block
+				width: 93%
+				height: 40%
+				position: absolute
+				left: 4%
+				bottom: 8%
+				z-index: -1
+				background: $black
+		small
+			display: block
+			font-size: .6em
+			line-height: .8
+	&__txt
+		margin-bottom: 1.9em
+		font-size: 21px
+		line-height: 1.27
+		opacity: 0.9
+	&__more
+		display: flex
+		align-items: center
+		margin-bottom: 45px
+		&::before
+			content: ''
+			display: block
+			width: 4em
+			height: 2px
+			margin-right: .8em
+			background: currentColor
+			@include trs(.1s)
+		&:hover
+			&::before
+				transform: translate3d(.2em, 0, 0)
+
+	&-slider
+		&-arrows
+			.slick-arrow
+				border-color: rgba($white, .2)
+			svg
+				fill: $white
+		.slick-dots
+			button
+				background: #ff905a
+			.slick-active
+				button
+					background: $white
+
+
+@include max-screen($xl)
+	.hero
+		padding: 50px
+		background-size: 70%, 100%
+	.hero::before, .hero::after
+		display: none
+	.hero__content
+		max-width: 100%
+		padding-left: 0
+	.hero__title
+		font-size: 90px
+		margin-bottom: .5em
+	.hero-slider-arrows
+		display: none
+
+@include max-screen($md)
+	.hero__title
+		font-size: 74px
+	.hero__txt
+		font-size: 18px
+	.hero__more
+		display: none
+
+@include max-screen($sm)
+	.hero
+		padding: 30px 15px
+		&__title
+			font-size: 50px
+
+
+/* ----- Блоки с ивентами и новостями ----- */
+.blocks
+	position: relative
+	z-index: 1
+	margin-top: -90px
+	&__row
+		align-items: flex-end
+	&__col
+		width: 50%
+	&__header
+		align-items: flex-end
+	&__title
+		font-size: 28px
+		line-height: 1.1
+		font-weight: 700
+	&__link
+		display: inline-block
+		margin-left: .8em
+		font-size: 18px
+		color: $accent
+
+	&-events
+		height: 335px
+		background-color: $white
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+		position: relative
+		z-index: 1
+		&::before, &::after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			background: $white
+			z-index: -1
+		&::before
+			right: -14px
+			bottom: -16px
+		&::after
+			left: 0
+			top: 0
+			box-shadow: 10px 17px 49px rgba(0, 0, 0, 0.09)
+		.blocks__header
+			padding: 25px 35px 25px 50px
+			border-bottom: 1px solid $bd-color
+		&__row
+			padding: 30px 35px 35px 50px
+		&__content
+			flex: 1
+			max-width: 100%
+			padding-right: 10%
+		&__img
+			width: 265px
+			flex: 0 0 265px
+			height: 179px
+		
+		&-arrows
+			margin-left: auto
+			.slick-arrow
+				font-size: 7px
+
+	&-data
+		display: flex
+		align-items: center
+		margin-bottom: .8em
+		&__num
+			font: 800 46px $title-font
+			letter-spacing: -0.04em
+			margin-right: .25em
+		&__date
+			font-weight: 700
+			font-size: 20px
+			line-height: 1
+			letter-spacing: -0.025em
+		&__city
+			display: block
+			opacity: 0.5
+		
+
+	&-news
+		height: 245px
+		padding: 50px 100px 15px 65px
+		background: $bg-color
+		position: relative
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			height: 16px
+			position: absolute
+			top: 100%
+			left: 0
+			background: $bg-color
+		.blocks__header
+			margin-bottom: 1em
+		p:not(:last-child)
+			margin-bottom: 0.5em
+
+@include max-screen($xl)
+	.blocks
+		margin-top: 50px
+		&__row
+			display: block
+		&__col
+			width: 100%
+	.blocks-events
+		height: auto
+		&__row
+			padding: 30px 35px 30px 50px
+	.blocks-news
+		height: auto
+		margin-top: 50px
+		padding: 30px 100px 30px 50px
+		&::after
+			display: none
+
+@include max-screen($md)
+	.blocks
+		margin-top: 40px
+	.blocks-events 
+		.blocks__header
+			padding: 20px
+		&__row
+			padding: 20px 20px 30px
+		&__content
+			padding-right: 5%
+		&__img
+			width: 200px
+			flex: 0 0 200px
+			height: auto
+	.blocks-news
+		padding: 20px 
+
+@include max-screen($sm)
+	.blocks-events__img
+		display: none
+	.blocks-events__content
+		padding-right: 0
+	.blocks-events-arrows
+		width: 100%
+		margin-top: 15px
+
+
+/* ----- Блок с информацией о компании ----- */
+.info-items
+	margin-top: 40px
+	&__row
+		width: calc(100% + 80px)
+		margin-left: -40px
+
+.info-item
+	width: 20%
+	padding: 40px 50px
+	@include trs(.1s)
+	&:hover
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+	&__ic
+		height: 50px
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		margin-bottom: 30px
+
+@include max-screen($xl)
+	.info-items__row
+		width: 100%
+		margin-left: 0
+	.info-item
+		padding: 30px
+		&:hover
+			box-shadow: none
+
+@include max-screen($lg)
+	.info-item
+		width: 33.33333%
+
+@include max-screen($md)
+	.info-items__row
+		justify-content: space-between
+	.info-item
+		width: calc(50% - 7.5px)
+		padding: 15px 0
+		&__ic
+			transform-origin: 0 100%
+			transform: scale(.9)
+
+
+
+/* ----- Блок решения и продукты ----- */
+.products
+	max-width: 100%
+	padding-top: 40px
+	border-top: 1px solid $bd-color
+
+	&__header
+		margin-bottom: 30px
+		align-items: flex-end
+		justify-content: space-between
+		.h2
+			margin-bottom: 0
+			margin-right: 15px
+
+	&-slider-wrapper
+		overflow: hidden
+	&-slider
+		margin-top: 50px
+		width: calc(100% + 26px)
+		// margin-left: -15px
+		.slick-list
+			overflow: visible
+			padding: 10px 0 40px
+		.slick-dots
+			margin-top: 35px
+			justify-content: center
+		.products-item
+			width: 292px
+			height: 370px
+			&__text
+				padding: 30px 40px
+
+
+	&-item
+		width: 100%
+		height: 100%
+		background: $bg-color
+		@include trs(.1s)
+		&__img
+			height: 181px
+		&__text
+			padding: 30px 25px 40px 25px
+			a:hover
+				color: $accent
+		&:hover
+			background: $white
+			box-shadow: 10px 17px 37px rgba(0, 0, 0, 0.09)
+
+
+@include max-screen($xl)
+	.products
+		padding-bottom: 40px
+	.products-slider
+		width: 100%
+		.slick-list
+			padding: 0
+		.products-item
+			width: 260px
+
+	.products-item
+		&__text
+			padding: 25px 20px 20px
+		&:hover
+			box-shadow: none
+
+@include max-screen($lg)
+	.products-slider .products-item
+		width: 300px
+		margin: 0 auto
+
+@include max-screen($md)
+	.products-slider
+		.products-item
+			width: 230px
+			height: 290px
+			&__text
+				padding: 20px 15px
+	.products-item
+		&__img
+			height: auto
+		&__text
+			padding: 20px 15px
+
+@include max-screen($sm)
+	.products-slider
+		.products-item
+			width: 100%
+			height: auto
+			min-height: 290px
+	.products-item
+		max-width: 360px
+		margin: 0 auto
+
+
+@include max-screen(480px)
+	.products-slider 
+		.slick-list
+			overflow: hidden
+
+		
+
+
+
+
+/* ----- Блок со слайдером конфигураторов и блок-ссылками ----- */
+
+.config-slider-wrapper
+	position: relative
+.config-slider-footer
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	position: absolute
+	bottom: 30px
+	right: 30px
+	.config-slider-arrows
+		margin-left: 25px
+
+.config-slider-arrows
+	.slick-arrow
+		border-color: $white
+
+.config-slide
+	height: 614px
+	padding: 85px 30px 30px 85px
+	background-color: $bg-color
+	position: relative
+	&__title
+		margin-bottom: 13px
+		span
+			font-size: 1.645833333333333em
+			line-height: .7
+			white-space: nowrap
+			color: $accent
+	.text-2
+		opacity: 0.6
+	&__img
+		font-size: 10px
+		width: 57.5em
+		height: 22.8em
+		position: absolute
+		left: 0
+		overflow: hidden
+		margin-top: 25px
+
+
+.block-links
+	margin-top: 35px
+
+	&__row
+		margin-left: -13px
+		margin-right: -13px
+		.cols
+			padding-left: 13px
+			padding-right: 13px
+
+	.block-link
+		margin-bottom: 26px
+	.block-import
+		margin-bottom: 0
+
+
+.block-link
+	width: 100%
+	height: 294px
+	padding: 35px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	background-color: $white
+	&__title
+		max-width: 50%
+		margin: auto 0 0
+
+.block-catalog
+	background: url('../img/img-catalog-1.jpg') no-repeat 80% 50%
+	background-size: cover
+	color: $white
+
+.block-projects
+	color: $accent
+	border: 2px solid $accent
+
+.block-import
+	background: $accent url('../img/img-import-1.png') no-repeat 100% 50%
+	color: $white
+
+
+@include max-screen($xl)
+	.config-slide
+		height: 530px
+		padding: 40px 30px 30px 40px
+	.config-slide__title span
+		font-size: 1.5em
+	.config-slider-footer
+		width: 100%
+		right: 0
+		justify-content: center
+	.block-link
+		height: 252px
+		padding: 20px
+
+@include max-screen($lg)
+	.block-links__mainrow
+		display: block
+		margin-left: 0
+		margin-right: 0
+		> .cols
+			width: 100%
+			padding-left: 0
+			padding-right: 0
+
+	.config-slider
+		margin-bottom: 26px
+	.config-slide
+		height: 430px
+		padding: 30px
+		&__title span
+			font-size: 1em
+		&__img
+			font-size: 8px
+
+	.block-link
+		height: 190px
+
+@include max-screen($md)
+	.config-slide
+		&__title
+			font-size: 40px
+		&__img
+			font-size: 6px
+
+@include max-screen($sm)
+	.config-slide
+		height: 385px
+		padding: 30px 20px 20px
+	.config-slide__title
+		font-size: 36px
+	.config-slide__img
+		font-size: 5px
+	.block-link
+		height: 150px
+	.block-link__title
+		font-size: 22px
+
+	.block-import
+		background-size: 35%
+
+
+
+
+/* ----- Блок тринити в цифрах ----- */
+.numbers
+	padding: 70px 0 80px
+	background-color: $bg-color
+
+	&__col
+		flex: 1
+		max-width: 100%
+		padding-right: 3%
+
+	&__list
+		margin-top: 40px
+		li
+			width: 33.33333%
+			margin-bottom: 30px
+		.text-2
+			max-width: 10em
+			color: #7c7c7c
+
+	&__val
+		font-size: 32px
+		margin-bottom: .3em
+		.fz-bigger
+			font-size: 1.125em
+
+	&__form
+		width: 456px
+		flex: 0 0 456px
+		.form-title
+			margin-bottom: .4em
+		.h3
+			font-size: 28px
+		.h1
+			font-size: 40px
+			line-height: 1
+
+@include max-screen($xl)
+	.numbers
+		padding: 50px 0
+	.numbers__row
+		display: block
+	.numbers__col
+		padding-right: 0
+	.numbers__list .text-2
+		max-width: 17em
+	.numbers__form
+		margin: 30px auto 0
+
+@include max-screen($lg)
+	.numbers__list .text-2
+		max-width: 10em	
+	
+@include max-screen($md)
+	.numbers__list li
+		width: 50%
+	.numbers__list .text-2
+		max-width: 14em
+		padding-right: 15px
+
+@include max-screen($sm)
+	.numbers__val
+		font-size: 28px
+	.numbers__form
+		width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

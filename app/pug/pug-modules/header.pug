@@ -1,0 +1,125 @@
+if page == "en"
+	header.header.header-en
+		.container
+			.header__line.flex
+
+				.logo
+					a(href="/")
+						img(src="img/logo-en.png", alt="Trinity")
+
+				a.tel-link(href="tel:88002005960") 8 800 200-59-60
+
+				.controls-block
+					.lang
+						a(href="/") Rus
+
+
+
+			// /.header__line
+
+else
+	header.header
+		.container.container--wide
+			.header__line.flex
+
+				.menu-toggle
+					span.menu-ic
+
+				.logo
+					if page == "main"
+						img(src="img/logo.svg", alt="Тринити")
+					else
+						a(href="/")
+							img(src="img/logo.svg", alt="Тринити")
+
+				nav.top-menu
+					ul.top-menu__list.list
+						li.active
+							a(href="resheniya.html") Решения
+							span.mob-toggle
+							ul.sublist.list
+								li
+									a(href="#") Серверное оборудование
+								li
+									a(href="#") Системы хранения данных
+								li
+									a(href="#") Сетевое оборудование 
+								li
+									a(href="#") Программное обеспечение
+						li
+							a(href="#") Услуги
+							//- span.mob-toggle
+						li
+							a(href="#") Проекты
+							//- span.mob-toggle
+						li
+							a(href="#") Новости
+							//- span.mob-toggle
+						li
+							a(href="#") Импортозамещение
+							//- span.mob-toggle
+						li
+							a(href="#") О компании   
+							//- span.mob-toggle
+						li.config-link
+							a(href="#") Конфигуратор
+							span.mob-toggle
+							ul.sublist.list
+								li
+									a(href="#") Конфигуратор серверов
+								li
+									a(href="#") Конфигуратор СХД
+								li
+									a(href="#") Конфигуратор чего-то
+
+
+					a.tel-link.mob-hidden(href="tel:88002005960") 8 800 200-59-60
+
+					.controls-block
+
+						.lang
+							a(href="en.html") En
+
+						.login.js-open-login
+							img(src="img/ic-login.svg", alt="alt")
+
+						.search
+							.search__toggle
+								img(src="img/ic-search-black.svg", alt="alt")
+							.search__form
+								form(action="#")
+									.flex
+										input.input.search__input(type="text", placeholder="Поиск", autocomplete="off", required)
+										button.btn.search__btn
+
+					button.btn-close(type="button")
+
+				a.tel-link.desktop-hidden(href="tel:88002005960") 8 800 200-59-60
+
+
+
+			// /.header__line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,170 @@
+- var page = "virtualizatsiya-serverov"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='Решения', href='resheniya.html')
+									span Решения
+							li
+								span Виртуализация серверов
+
+				// /.breadcrumbs
+
+
+				.container.container--wide
+					
+					.virtualiztion-hero
+						.container
+
+							.virtualiztion-hero__col
+								.h1.page-title Виртуализация серверов, систем хранения данных, рабочих станций и приложений 
+								p.text-1 Современные средства виртуализации— повышение отказоустойчивости и управляемости ИТ-инфраструктуры, увеличение эффективности и гибкости использования ресурсов, снижение расходов на ИТ.
+								.virtualiztion-hero__img
+									img(src="img/img-virtualization-1.png", alt="alt")
+							ul.virtualiztion-links.text-2.list
+								li
+									a.virtualiztion-link(href="#") Виртуализация серверов
+								li
+									a.virtualiztion-link(href="#") Виртуализация систем хранения 
+								li
+									a.virtualiztion-link(href="#") Виртуализация приложений
+								li
+									a.virtualiztion-link(href="#") Виртуализация рабочих станций - VDI
+						
+
+					// /.virtualiztion-hero
+
+				// /.container
+
+
+
+				.container
+
+					.section-padding
+						.responsive-row.f-row
+							.cols.col-1-2
+								.text-2
+									p Виртуализация существенно повышает эффективность и доступность ресурсов и приложений в организациях. При использовании устаревшей модели «один сервер — одно приложение» ресурсы используются не полностью, а системные инженеры тратят слишком много рабочего времени на управление серверами.
+							.cols.col-1-2
+								.text-2.no-margins
+									p Современные средства виртуализации, помимо оптимизации использования имеющихся ресурсов, обеспечивают повышение отказоустойчивости и управляемости ИТ-инфраструктуры. 
+									p Таким образом обеспечивается снижение расходов на ИТ, увеличиваются эффективность и гибкость использования ресурсов.
+
+					.section-padding.row-col
+						.text-1.text-bold
+							p Мы имеем богатый опыт в планировании и внедрении виртуальных систем и предлагаем решения производителей
+
+
+					.virtualization-decisions.section-padding
+						.f-row
+							.cols.col-1-3
+								.virtualization-decision
+									img(src="img/img-decision-1.jpg", alt="alt")
+							.cols.col-1-3
+								.virtualization-decision
+									img(src="img/img-decision-2.jpg", alt="alt")
+							.cols.col-1-3
+								.virtualization-decision
+									img(src="img/img-decision-3.jpg", alt="alt")
+
+					.section-padding.row-col
+						.text-1
+							p Нами разработан программно-аппаратный комплекс, позволяюший инженерам, дизайнерам и проектировщикам работать с CAD/CAM/CAE приложениями, используя технологию VDI.
+							p Все вычислительные ресурсы находятся в защищенном ЦОДе, что позволяет пользователям получать необходимые данные и работать с ними удаленно посредством интернет-связи и при этом ширина канала не имеет большого значения.
+
+
+					.virtualization-block-links.section-padding
+						.f-row
+							.cols.col-1-4
+								.products-item
+									a(href="#")
+										.products-item__img
+												img.img(src="img/img-products-1.jpg", alt="alt")
+										.products-item__text
+											p.text-2 Виртуализация серверов
+							// /.cols.col-1-4
+							.cols.col-1-4
+								.products-item
+									a(href="#")
+										.products-item__img
+												img.img(src="img/img-products-2.jpg", alt="alt")
+										.products-item__text
+											p.text-2 Виртуализация систем хранения
+							// /.cols.col-1-4
+							.cols.col-1-4
+								.products-item
+									a(href="#")
+										.products-item__img
+												img.img(src="img/img-products-3.jpg", alt="alt")
+										.products-item__text
+											p.text-2 Виртуализация приложений
+							// /.cols.col-1-4
+							.cols.col-1-4
+								.products-item
+									a(href="#")
+										.products-item__img
+												img.img(src="img/img-products-4.jpg", alt="alt")
+										.products-item__text
+											p.text-2 Виртуализация рабочих станций - VDI
+							// /.cols.col-1-4
+
+
+				// /.container
+				
+				
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

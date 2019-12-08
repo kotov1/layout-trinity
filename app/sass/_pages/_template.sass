@@ -1,0 +1,370 @@
+/* ------------------------------------- 
+	Шаблон
+	------------------------------------- */
+
+.template
+	.tabs-wrapper
+		margin: 20px 0 15px
+
+.m-top
+	margin-top: 40px
+.template-section
+	padding: 40px 0
+
+
+@include max-screen($xl)
+	.responsive-row
+		.col-3-4, .col-1-4
+			width: 50%
+
+@include max-screen($md)
+	.m-top
+		margin-top: 20px
+	.template-section
+		padding: 20px 0
+
+	.responsive-row
+		display: block
+		margin-left: 0
+		margin-right: 0
+		.col-1-2, .col-3-4, .col-1-4
+			width: 100%
+		.cols
+			padding-left: 0
+			padding-right: 0
+			+ .cols
+				margin-top: 30px
+
+
+
+
+
+
+/* ----- вид ряда спецификации (в аккордионе) ----- */
+.spec-row
+	display: flex
+	color: $sub-color
+	+ .spec-row
+		margin-top: 1em
+.spec-col
+	&:first-child
+		min-width: 30%
+		padding-right: 15px
+		color: $black
+		
+
+
+
+/* ----- секция Технические характеристики ----- */
+.tech-data
+	margin-top: 45px
+	padding: 50px 0
+	background-color: $bg-color
+	&__list
+		color: $sub-color
+		li
+			display: flex
+			align-items: flex-end
+			&:not(:last-child)
+				margin-bottom: .8em
+			p
+				margin: 0
+		.dotted
+			display: inline-block
+			min-width: 295px
+			font-weight: 700
+			color: $black
+
+
+.dotted
+	position: relative
+	z-index: 1
+	&::after
+		content: ''
+		display: block
+		width: 96%
+		position: absolute
+		left: 2%
+		bottom: .25em
+		z-index: -1
+		border-bottom: 1px dotted #b9b9b9
+	span
+		background: $bg-color
+
+
+@include max-screen($md)
+	.tech-data__list .dotted
+		min-width: 175px
+		max-width: 175px
+	
+@include max-screen(400px)
+	.tech-data__list li
+		display: block
+		.dotted::after
+			display: none
+
+
+
+
+
+
+/* ----- секция Программа ----- */
+.program
+	padding: 70px 0
+
+	&__block
+		position: relative
+		padding-bottom: 1em
+		&::after
+			content: ''
+			display: block
+			width: 1px
+			height: 100%
+			position: absolute
+			left: 12.94em
+			top: 2em
+			z-index: 0
+			background: $accent
+
+	&__item
+		display: flex
+		align-items: center
+		margin-bottom: 1em
+	
+	&__time
+		width: 8.6em
+		margin-right: 9em
+		padding: 1.2em 1em
+		background-color: $bg-color
+		font-weight: 700
+		text-align: center
+		position: relative
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			width: 9em
+			height: 1px
+			background: $bd-color
+			left: 100%
+		&::after
+			width: 13px
+			height: 13px
+			left: 12.6em
+			z-index: 0
+			border-radius: 50%
+			background: $accent
+
+	&__info
+		flex: 1
+		max-width: 100%
+		padding: 1.2em 2em
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+
+@include max-screen($xl)
+	.program
+		&__block::after
+			left: 11.725em
+		&__time
+			margin-right: 6em
+			&::before
+				width: 6em
+			&::after
+				left: 11.4em
+
+@include max-screen($md)
+	.program
+		&__block
+			padding-bottom: 0
+			&::after
+				left: 6px
+		&__item
+			display: block
+			padding-left: 30px
+		&__time
+			margin: 0 0 13px 0
+			&::before
+				width: 30px
+				left: -30px
+			&::after
+				left: -30px
+		&__info
+			margin-bottom: 40px
+
+
+
+/* ----- типовая таблица ----- */
+.table
+	width: 100%
+	border-collapse: collapse
+	font-size: 18px
+	th, td
+		padding: 1.1em 2em
+		border: 1px solid $bd-color
+	th
+		font-weight: 400
+		background-color: rgba($accent, .2)
+	tbody
+		tr:nth-child(2n)
+			td
+				background-color: $bg-color
+
+@include max-screen($xl)
+	.table
+		th, td
+			padding: 1em 1.5em
+
+@include max-screen($md)
+	.table-wrapper
+		max-width: 100%
+		overflow: scroll
+		padding-bottom: 3px
+		.table
+			width: 728px
+
+
+
+
+
+
+
+
+
+/* ----- Пример плиток проектов ----- */
+.project-plate
+	height: 100%
+	background-color: $bg-color
+
+	&__img
+		position: relative
+		height: 351px
+		overflow: hidden
+		a > img
+			will-change: transform
+			transition: transform 2s .1s linear
+	
+	&__logo
+		font-size: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 19.4em
+		height: 15em
+		padding: 1em
+		position: absolute
+		top: 0
+		left: 4.4em
+		z-index: 1
+		background: $white
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.05)
+
+	&__text
+		padding: 1.5em 2em
+		
+	&:hover
+		.project-plate__img a > img
+			transform: scale(1.4)
+			transition-duration: 8s
+
+@include max-screen($xl)
+	.project-plate
+		&__img
+			height: 300px
+		&__logo
+			font-size: 6px
+	.project-plate
+		&__text
+			padding: 1em
+
+@include max-screen($xl)
+	.project-plate
+		&__img
+			height: 250px
+
+
+
+
+
+/* ----- Блок с логотипами партнеров ----- */
+.partners
+	margin: 70px 0
+	&__header
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		.h2
+			margin-bottom: 0
+			margin-right: auto
+		.partners-slider-arrows
+			margin-left: 25px
+.partners-slider
+	.slick-list
+		padding: 1px
+.partners-list 
+	li
+		width: 209.3px
+		height: 120px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 0 -1px -1px
+		padding: 15px
+		border: 1px solid $bd-color
+
+@include max-screen($xxl)
+	.partners-list li
+		width: 196.3px
+		
+@include max-screen($xl)
+	.partners-list li
+		width: 155.5px
+		height: 110px
+
+@include max-screen($lg)
+	.partners
+		position: relative
+		padding-bottom: 40px
+	.partners-list li
+		width: 243px
+	.partners-slider-dots
+		width: 100%
+		position: absolute
+		bottom: 0
+		left: 0
+		display: flex
+		justify-content: center
+
+@include max-screen($md)
+	.partners-list li
+		width: 170.3px
+
+@include max-screen($sm)
+	.partners-list
+		li
+			height: 90px
+			width: 33.52%
+
+	.partners-slider
+		.partners-list
+			li
+				&:nth-child(3n)
+					border-right-color: transparent
+
+@include max-screen(400px)
+	.partners-list li
+		height: 85px
+		padding: 10px
+
+
+
+
+
+
+
+
+
+
+

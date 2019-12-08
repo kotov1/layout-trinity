@@ -1,0 +1,234 @@
+- var page = "resheniya"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								span Решения
+
+				// /.breadcrumbs
+				
+				.container
+					.h1.page-title Решения
+
+					.resheniya.f-row
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-1.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Виртуализация серверов, систем хранения данных, рабочих станций и приложений
+									ul.list.text-2 
+										li 
+											a(href="virtualizatsiya-serverov.html") Виртуализация серверов
+										li Виртуализация систем хранения 
+										li Виртуализация приложений 
+										li VTL - виртуальные библиотеки
+										li Виртуализация сетей
+						// /.cols.col-1-4
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-3.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Катастрофоустой-чивые решения 
+									ul.list.text-2 
+										li Репликация на уровне СХД
+										li Репликация на уровне гипервизора
+										li Репликация средствами приложений
+										li Заявка на проработк
+						// /.cols.col-1-4
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-2.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Высокопроизводи-тельные вычисления и VDI
+									ul.list.text-2 
+										li HPC. Cуперкомпьютеры x86
+										li SMP серверы и vSMP комплексы
+										li GPU. Проектирование и визуализация
+										li VDI архитектура
+										li Офисный суперкомпьютер
+						// /.cols.col-1-4
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-4.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Deep Learning и AI
+									ul.list.text-2 
+										li NVIDIA DGX STATION
+										li NVIDIA DGX-1
+										li NVIDIA DGX-2
+										li INTEL NCS 2
+										li IBM Power AC922
+						// /.cols.col-1-4
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-5.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Резервное копирование, архивирование и восстановление данных
+									ul.list.text-2 
+										li Commvault
+										li Veeam Software
+						// /.cols.col-1-4
+
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-6.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Информационная безопасность и защита информации
+									ul.list.text-2 
+										li Сетевая безопасность
+										li DLP - предотвращение утечки данных
+										li Средства шифрования
+										li Антивирусная защита
+										li Защита персональных данных
+										li Контроль действий привилегированных пользователей
+										li Защита объектов КИИ
+										li Защита от таргетированных атак
+										li Уничтожение данных
+										li MDM - контроль и защита мобильных устройств
+						// /.cols.col-1-4
+						
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-7.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Инженерная инфраструктура ЦОД
+									ul.list.text-2 
+										li Проектирование ЦОД
+										li Системы электроснабжения
+										li Климатические системы ЦОД
+										li Системы пожаротушения
+										li Системы мониторинга
+										li ЛВС / СКС
+										li Температурный анализ ЦОД
+						// /.cols.col-1-4
+						
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-8.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Видеонаблюдение
+						// /.cols.col-1-4
+						
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-9.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Телевидение, IPTV / OTT
+									ul.list.text-2 
+										li Оборудование для цифрового телевидения
+										li Системы IPTV и Интернет ТВ вещания (WebTV/OTT)
+						// /.cols.col-1-4
+						
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-10.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Прогностическая аналитика
+									ul.list.text-2 
+										li Прогнозная аналитика IBM PMQ
+										li IBM SPSS Modeler
+										li Прогнозирование людей
+										li Прогнозирование машин
+										li Интеллектуальный анализ данных
+										li Аналитическая платформа Форсайт
+						// /.cols.col-1-4
+						
+						.cols.col-1-4
+							.products-item
+								.products-item__img
+									img.img(src="img/img-products-11.jpg", alt="alt")
+								
+								.products-item__text
+									p.text-1 Инженерная инфраструктура ЦОД
+									ul.list.text-2 
+										li Проектирование ЦОД
+										li Системы электроснабжения
+										li Климатические системы ЦОД
+										li Системы пожаротушения
+										li Системы мониторинга ЛВС / СКС
+										li Температурный анализ ЦОД
+						// /.cols.col-1-4
+									 
+					// /.resheniya 
+
+
+				// /.container
+
+
+
+				
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

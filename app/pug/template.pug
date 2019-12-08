@@ -1,0 +1,439 @@
+- var page = "template"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='Раздел', href='#')
+									span Раздел
+							li
+								span Название страницы
+
+				// /.breadcrumbs
+				
+				.template
+
+					.container
+
+
+						h1.h1 Длинная страница с примерами расположения
+
+						.tabs-wrapper
+							.tabs.text-1
+								button.tab.tab--active(type="button") 
+									span Активная вкладка
+								button.tab(type="button") 
+									span Неактивная вкладка
+
+						p.text-2 При оформлении заказа укажите реквизиты юридического лица. Реквизиты указываются в соответствии с учредительными документами организации, которая является плательщиком и получателем заказа.
+
+						h2.h2.m-top Заголовок H2
+
+						.text-col
+							p.text-1 Надежные и высокопроизводительные серверы «Тринити» производятся на базе серверных платформ SUPERMICRO и оборудования INTEL. 
+
+
+						// изображение на всю ширину
+						.template-section
+							img(src="content/img-template-1.jpg", alt="alt")
+						
+						// /.template-section
+
+
+						// списки
+						.template-section
+							.responsive-row.f-row
+								.cols.col-1-2
+									.h2 Маркированный список
+									ul.text-list.list
+										li Предъявить паспорт и доверенность на получение товарно-материальных ценностей (позиций в заказе). 
+										li Доверенность должна быть заверена подписями генерального директора, главного бухгалтера и печатью (если есть).
+										li В доверенности укажите в качестве поставщика (продавца) ЗАО «ТРИНИТИ СОЛЮШНС».
+										li Подписать счет-договор.
+										li Подписать сопроводительные документы и заверить их печатью (если она есть). 
+								.cols.col-1-2
+									.h2 Нумерованный список
+									ol.text-list.list
+										li Предъявить паспорт и доверенность на получение товарно-материальных ценностей (позиций в заказе). 
+										li Доверенность должна быть заверена подписями генерального директора, главного бухгалтера и печатью (если есть).
+										li В доверенности укажите в качестве поставщика (продавца) ЗАО «ТРИНИТИ СОЛЮШНС».
+										li Подписать счет-договор.
+										li Подписать сопроводительные документы и заверить их печатью (если она есть). 
+
+						// /.template-section
+
+
+						// изображение в две колонки
+						.template-section
+							.responsive-row.f-row
+								.cols.col-1-2
+									img(src="content/img-template-2.jpg", alt="alt")
+								.cols.col-1-2
+									img(src="content/img-template-3.jpg", alt="alt")
+
+						// /.template-section
+
+
+						// текст в две колонки
+						.template-section
+							.responsive-row.f-row
+								.cols.col-1-2
+									.text-2
+										p Технология "thin provisioning" - выделение дискового пространства по мере необходимости, которая есть в системах виртуализации (IBM SVC, HDS USP/USP-V).
+										p Данная технология позволяет выделить серверу заведомо больший объем дискового пространства, чем требуется, но реальное дисковое пространство будет выделяться по мере записи новых данных. 
+										p Это позволяет оптимизировать использование дискового пространства, при этом существенно экономя на закупке новых дисков.<br> Данная технология позволяет выделить серверу заведомо больший объем дискового пространства, чем требуется, но реальное дисковое  
+								.cols.col-1-2
+									.text-block.text-1
+										p Система виртуализации упрощает непосредственное администрирование СХД и значительно снижает расходы на решение остальных задач эксплуатации систем хранения.
+
+						// /.template-section
+
+
+						// аккордион
+						.template-section
+							.block-col
+								ul.accordion.list.text-1
+									li
+										.accordion-btn Развернуть все спецификации 1
+											span.accordion-ic
+										.accordion-content.text-2
+											.spec-row
+												.spec-col Memory Capacity 
+												.spec-col 
+													ul.list
+														li 24 DIMM slots
+														li Up to 6TB 3DS ECC DDR4-2933MHz RDIMM/LRDIMM
+														li Supports Intel® Optane™ DCPMM
+											.spec-row
+												.spec-col Memory Type
+												.spec-col 
+													ul.list
+														li 2933/2666/2400/2133MHz ECC DDR4 RDIMM/LRDIMM
+														li 2666 ECC DDR4 NVDIMM
+									li
+										.accordion-btn Развернуть все спецификации 2
+											span.accordion-ic
+										.accordion-content.text-2
+											.spec-row
+												.spec-col Memory Capacity 
+												.spec-col 
+													ul.list
+														li 24 DIMM slots
+														li Up to 6TB 3DS ECC DDR4-2933MHz RDIMM/LRDIMM
+														li Supports Intel® Optane™ DCPMM
+											.spec-row
+												.spec-col Memory Type
+												.spec-col 
+													ul.list
+														li 2933/2666/2400/2133MHz ECC DDR4 RDIMM/LRDIMM
+														li 2666 ECC DDR4 NVDIMM
+									li
+										.accordion-btn Развернуть все спецификации 3
+											span.accordion-ic
+										.accordion-content.text-2
+											.spec-row
+												.spec-col Memory Capacity 
+												.spec-col 
+													ul.list
+														li 24 DIMM slots
+														li Up to 6TB 3DS ECC DDR4-2933MHz RDIMM/LRDIMM
+														li Supports Intel® Optane™ DCPMM
+											.spec-row
+												.spec-col Memory Type
+												.spec-col 
+													ul.list
+														li 2933/2666/2400/2133MHz ECC DDR4 RDIMM/LRDIMM
+														li 2666 ECC DDR4 NVDIMM
+
+						// /.template-section
+
+					// /.container
+
+
+					.tech-data
+						.container
+							.h2 Технические характеристики
+							.block-col
+								ul.tech-data__list.text-2.list
+									li
+										.dotted 
+											span Процессор 	
+										div Два Intel Xeon E5 (TDP не более 130Вт) 
+									li
+										.dotted  
+											span ОЗУ
+										div До 512ГБ DDR3 ECC REG 
+									li
+										.dotted  	
+											span Чипсет
+										div Intel® C602 
+									li
+										.dotted 	
+											span Жесткие диски 
+										div 
+											p До 4шт SATA HDD
+											p При установке опционального RAID контроллера - до 4шт SAS HDD (или комбинация SAS-SATA) 
+									li
+										.dotted 
+											span RAID контроллер
+										div 
+											p Полноценный аппаратный RAID-контроллер: Adaptec RAID / LSI RAID
+											p Для подключения внешних СХД опционально поставляются:
+											p — SAS HBA LSISAS3442E-R
+											p — FC HBA Qlogic QLE2460 (однопортовый 4Гбит/с, LC multimode)
+											p — FC HBA Qlogic QLE2462 (двухпортовый 4Гбит/с, LC multimode) 
+									li
+										.dotted  	
+											span Сеть
+										div 2 x Gigabit Ethernet (RJ45) 
+									li
+										.dotted 
+											span Слоты расширения
+										div Один PCI-Eх8 (может быть занят RAID контроллером) 
+									li
+										.dotted 
+											span Питание
+										div Одиночный 440-480Вт блок питания, 220В 50Гц 
+									li
+										.dotted 
+											span Габариты
+										div 19" 1U, 437х503х43мм (ШхГхВ) 
+									li
+										.dotted 
+											span Управление
+										div SuperDoctorIII, Adaptec Storage Manager Удаленное управление IPMI с функциями KVM-Over-LAN и Virtual Media over LAN 
+									li
+										.dotted 
+											span Интегрированные устройства
+										div 2xUSB2.0, 6xSATA, Video, PS/2 KB/Mouse 
+
+					// .tech-data
+
+
+					.program
+						.container
+							.h2 Программа:
+							.program__block.text-2
+								.program__item
+									.program__time 15:00 — 15:30 
+									.program__info Сбор гостей, welcome-coffee 
+								.program__item
+									.program__time 15:40 — 16:20
+									.program__info Приветственное слово Тринити, Антон Ковалев 
+								.program__item
+									.program__time 16:20 −17:00 
+									.program__info Решения будущего — уже сегодня, Владимир Статуев и Антон Ковалев 
+								.program__item
+									.program__time 15:30 — 15:40 
+									.program__info User Gate — российский NGFW, Дарья Кургаева 
+
+					// /.program
+
+
+					.container
+
+						// Пример таблицы
+						.template-section
+							.h2 Пример таблицы
+							.block-col
+								.table-wrapper
+									table.table
+										thead
+											tr
+												th Ячейка шапки таблицы
+												th Ячейка шапки таблицы
+												th Ячейка шапки таблицы
+										tbody
+											tr
+												td Ячейка таблицы
+												td Ячейка таблицы
+												td Ячейка таблицы
+											tr
+												td Ячейка таблицы
+												td Ячейка таблицы
+												td Ячейка таблицы
+											tr
+												td Ячейка таблицы
+												td Ячейка таблицы
+												td Ячейка таблицы
+
+						// /.template-section
+
+
+						// Вариации текст-картинка
+						.template-section
+							.h2 Вариации текст-картинка
+							.responsive-row.f-row
+								.cols.col-1-2
+									.text-2
+										p Технология "thin provisioning" - выделение дискового пространства по мере необходимости, которая есть в системах виртуализации (IBM SVC, HDS USP/UP-V).
+										p Данная технология позволяет выделить серверу заведомо больший объем дискового пространства, чем требуется, но реальное дисковое пространство будет выделяться по мере записи новых данных. 
+										p Это позволяет оптимизировать использование дискового пространства, при этом существенно экономя на закупке новых дисков.<br> Данная технология позволяет выделить серверу заведомо больший объем дискового пространства, чем требуется, но реальное дисковое  
+								.cols.col-1-2
+									img(src="content/img-template-1.jpg", alt="alt")
+
+						// /.template-section
+
+						.template-section
+							.responsive-row.f-row
+								.cols.col-3-4
+									img(src="content/img-template-1.jpg", alt="alt")
+								.cols.col-1-4
+									.text-block.text-2
+										p Технология "thin provisioning" - выделение дискового пространства по мере необходимости, которая есть в системах виртуализации (IBM SVC, HDS USP/UP-V).
+										p Данная технология позволяет выделить серверу заведомо больший объем дискового пространства, чем требуется, но реальное дисковое пространство будет выделяться по мере записи новых данных. 
+					
+						// /.template-section
+
+
+						// Пример плиток проектов
+						.template-section
+							.h2 Пример плиток проектов
+							.responsive-row.f-row
+								.cols.col-1-2
+									.project-plate
+										.project-plate__img
+											a(href="#")
+												.project-plate__logo
+													img(src="content/logo-project-1.jpg", alt="alt")
+												img.img(src="content/img-project-1.jpg", alt="alt")
+										.project-plate__text.text-1 
+											a(href="#") Беспроводная сеть передачи данных Wi-Fi Университета ИТМО 
+								.cols.col-1-2
+									.project-plate
+										.project-plate__img
+											a(href="#")
+												.project-plate__logo
+													img(src="content/logo-project-2.jpg", alt="alt")
+												img.img(src="content/img-project-2.jpg", alt="alt")
+										.project-plate__text.text-1 
+											a(href="#") Обновление ИТ-инфраструктуры «Кузбассразрезуголь»
+
+
+						// /.template-section
+
+						// Партнеры / Вендоры
+						.template-section
+							.h2 Партнеры / Вендоры
+
+							ul.partners-list.list.flex
+								li
+									img(src="img/partners/img-partner-1.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-2.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-3.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-4.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-5.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-6.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-7.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-8.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-9.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-10.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-16.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-17.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-11.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-12.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-13.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-14.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-15.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-16.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-17.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-18.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-4.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-5.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-6.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-7.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-8.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-9.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-10.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-11.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-12.jpg", alt="alt")
+								li
+									img(src="img/partners/img-partner-13.jpg", alt="alt")
+
+						// /.template-section
+						
+			
+				
+					// writeform
+					include pug-modules/writeform
+					// /.writeform
+
+
+
+				// /.template
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

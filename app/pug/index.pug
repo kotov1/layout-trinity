@@ -1,0 +1,425 @@
+- var page = "main"
+- var slick = true
+- var partners_slider = true
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.container.container--wide
+					.hero
+						.container
+							.hero__content
+								.hero-slider
+									.slide
+										.h1.hero__title 
+											span Надёжный 
+											small партнёр в IT
+										p.hero__txt Системный интегратор полного цикла и надёжный бизнес-партнёр для коммерческих организаций и государственных структур
+										a.text-2.hero__more(href="#") узнайте о нас больше
+									.slide
+										.h1.hero__title 
+											span Слайд 2 
+											small партнёр в IT
+										p.hero__txt Системный интегратор полного цикла и надёжный бизнес-партнёр для коммерческих организаций и государственных структур
+										a.text-2.hero__more(href="#") узнайте о нас больше
+									.slide
+										.h1.hero__title 
+											span Слайд 3 
+											small партнёр в IT
+										p.hero__txt Системный интегратор полного цикла и надёжный бизнес-партнёр для коммерческих организаций и государственных структур
+										a.text-2.hero__more(href="#") узнайте о нас больше
+								.hero-slider-arrows
+								
+					// /.hero
+				
+				// /.container
+
+
+				.container
+					.blocks
+						.blocks__row.flex
+							.blocks__col.blocks-events
+								.blocks__header.flex
+									.blocks__title Мероприятия
+									a.blocks__link(href="#") Все
+									.blocks-events-arrows
+
+								.blocks-events-slider
+									.slide
+										.blocks-events__row.flex
+											.blocks-events__content
+												.blocks-data
+													.blocks-data__num 10 
+													.blocks-data__txt
+														span.blocks-data__date октября 2019
+														span.blocks-data__city Санкт-Петербург
+												p.text-2 Семинар Тринити «Новые возможности для бизнеса: Zebra и Check Point»
+											.blocks-events__img
+												img(src="content/img-event-1.jpg", alt="alt")
+									.slide
+										.blocks-events__row.flex
+											.blocks-events__content
+												.blocks-data
+													.blocks-data__num 11 
+													.blocks-data__txt
+														span.blocks-data__date октября 2019
+														span.blocks-data__city Санкт-Петербург
+												p.text-2 Семинар Тринити «Новые возможности для бизнеса: Zebra и Check Point»
+											.blocks-events__img
+												img(src="content/img-event-1.jpg", alt="alt")
+									.slide
+										.blocks-events__row.flex
+											.blocks-events__content
+												.blocks-data
+													.blocks-data__num 12 
+													.blocks-data__txt
+														span.blocks-data__date октября 2019
+														span.blocks-data__city Санкт-Петербург
+												p.text-2 Семинар Тринити «Новые возможности для бизнеса: Zebra и Check Point»
+											.blocks-events__img
+												img(src="content/img-event-1.jpg", alt="alt")
+							// /.blocks-events
+
+							.blocks__col.blocks-news
+								.blocks__header.flex
+									.blocks__title Новости
+									a.blocks__link(href="#") Все
+								p.text-2.text-bold 27.08.2019 
+								p.text-2 Тринити совместно с CISCO провели семинар <span class="nowrap">для IT-директоров</span> <span class="nowrap">и T-менеджеров</span> по актуальным вопросам модернизации центров обработки данных
+							// /.blocks-news
+
+				// /.container
+
+
+				.info-items
+					.container
+						.info-items__row.flex
+							.info-item
+								.info-item__ic
+									img(src="img/ic-info-1.png", alt="alt")
+								p.text-2 Cоздание IT-инфраструктуры предприятия
+							.info-item
+								.info-item__ic
+									img(src="img/ic-info-2.png", alt="alt")
+								p.text-2 Аудит IT и консультирование
+							.info-item
+								.info-item__ic
+									img(src="img/ic-info-3.png", alt="alt")
+								p.text-2 Информационная безопасность
+							.info-item
+								.info-item__ic
+									img(src="img/ic-info-4.png", alt="alt")
+								p.text-2 Производство и&nbsp;поставка 
+									span.nowrap IT-оборудования
+							.info-item
+								.info-item__ic
+									img(src="img/ic-info-5.png", alt="alt")
+								p.text-2 Решения для мультиканальных маркетинговых коммуникаций
+				
+					// /.container
+			
+				// /.info-items	
+
+
+				section.products
+					.container
+						.products__header.flex
+							.h2 Решения и продукты
+							.products-slider-arrows
+						
+						.text-col
+							p.text-1 Подберём для вас оптимальное решение для построения и&nbsp;эксплуатации ИТ-инфраструктуры любой сложности
+					// /.container
+
+					.products-slider-wrapper
+						.container
+							.products-slider
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-1.jpg", alt="alt")
+											.products-item__text.text-2 Виртуализация серверов, систем хранения данных, рабочих станций и приложений
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-2.jpg", alt="alt")
+											.products-item__text.text-2 Высокопроизводительные вычисления и VDI
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-3.jpg", alt="alt")
+											.products-item__text.text-2 Катастрофоустойчивые решения 
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-4.jpg", alt="alt")
+											.products-item__text.text-2 Deep Learning и AI
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-5.jpg", alt="alt")
+											.products-item__text.text-2 Резервное копирование, архивирование и восстановление данных
+								.slide
+									.products-item
+										a(href="#")
+											.products-item__img
+												img.img(src="img/img-products-6.jpg", alt="alt")
+											.products-item__text.text-2 Информационная безопасность и защита информации
+
+				// /products
+
+
+
+				.block-links
+					.container
+						.block-links__row.block-links__mainrow.flex
+
+							.cols.col-1-2
+
+								.config-slider-wrapper
+									.config-slider
+										.slide
+											.config-slide
+												a(href="#")
+													.config-slide__title.h1 Конфигуратор 
+														span серверов
+													p.text-2 Сконфигурируйте сервер под свои цели и задачи
+													.config-slide__img
+														img.img(src="img/img-config-1.png", alt="alt")
+										.slide
+											.config-slide
+												a(href="#")
+													.config-slide__title.h1 Конфигуратор 
+														span серверов 2
+													p.text-2 Сконфигурируйте сервер под свои цели и задачи
+													.config-slide__img
+														img.img(src="img/img-config-1.png", alt="alt")
+										.slide
+											.config-slide
+												a(href="#")
+													.config-slide__title.h1 Конфигуратор 
+														span серверов 3
+													p.text-2 Сконфигурируйте сервер под свои цели и задачи
+													.config-slide__img
+														img.img(src="img/img-config-1.png", alt="alt")
+									.config-slider-footer
+										.config-slider-dots
+										.config-slider-arrows
+
+							.cols.col-1-2
+								.block-links__row.flex
+									.cols.col-1-2
+										a.block-catalog.block-link(href="#")
+											.block-link__title.h3 Каталог серверов
+									.cols.col-1-2
+										a.block-projects.block-link(href="#")
+											.block-link__title.h3 Наши проекты
+									.cols.col-1
+										a.block-import.block-link(href="#")
+											.block-link__title.h3 Импортозамещение
+
+					// /.container
+		
+				// /.block-links
+
+
+				section.partners
+					.container
+						.partners__header
+							.h2 Нам доверяют:
+							.partners-slider-dots
+							.partners-slider-arrows
+
+						.partners-slider
+							.slide
+								ul.partners-list.list.flex
+									li
+										img(src="img/partners/img-partner-1.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-2.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-3.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-4.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-5.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-6.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-7.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-8.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-9.jpg", alt="alt")
+							.slide
+								ul.partners-list.list.flex
+									li
+										img(src="img/partners/img-partner-10.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-11.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-12.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-13.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-14.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-15.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-16.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-17.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-18.jpg", alt="alt")
+							.slide
+								ul.partners-list.list.flex
+									li
+										img(src="img/partners/img-partner-1.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-3.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-18.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-4.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-6.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-5.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-7.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-8.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-2.jpg", alt="alt")
+							.slide
+								ul.partners-list.list.flex
+									li
+										img(src="img/partners/img-partner-16.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-9.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-10.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-11.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-12.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-13.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-17.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-14.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-15.jpg", alt="alt")
+							.slide
+								ul.partners-list.list.flex
+									li
+										img(src="img/partners/img-partner-1.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-2.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-3.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-4.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-5.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-6.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-17.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-14.jpg", alt="alt")
+									li
+										img(src="img/partners/img-partner-15.jpg", alt="alt")
+
+
+					// /.container
+
+				// /.partners
+
+
+				section.numbers
+					.container
+						.numbers__row.flex
+							.numbers__col
+								.h2 Тринити в цифрах:
+								ul.numbers__list.flex.list
+									li
+										.numbers__val.h2
+											span.fz-bigger 26 
+											| лет
+										p.text-2 Безупречной работы 
+											span.nowrap на рынке IT
+									li
+										.numbers__val.h2 15 000 
+										p.text-2 Серверов в год 
+									li
+										.numbers__val.h2 30 000 
+										p.text-2 Посетителей на техническом форуме Тринити
+									li
+										.numbers__val.h2 150+
+										p.text-2 IT-экспертов с богатым опытом реализации сложных проектов
+									li
+										.numbers__val.h2 40
+										p.text-2 Ключевых производителей
+									li
+										.numbers__val.h2 3
+										p.text-2 Подразделения: <br> Москва, <span class="nowrap">Санкт-Петербург</span>, Екатеринбург
+							// /.numbers__col
+
+							.numbers__form.form
+								.form-title.h3 Проконсультируем вас 
+									div.h1.color-accent бесплатно!
+								form(action="#")
+									.input-block
+										input.input.input--type-2(type="tel", name="tel", placeholder="Ваш телефон", required)
+										span.input-placeholder Ваш телефон
+									label.checkbox
+										input.checkbox-hidden(type='checkbox', name='privacy', checked)
+										span.checkbox-wrap
+										span.checkbox-text Согласен на обработку персональных данных
+									button.btn.submit Отправить
+
+							// /.numbers__form
+
+
+					// /.container
+				// /.numbers
+
+
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+

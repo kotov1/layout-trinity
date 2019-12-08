@@ -1,0 +1,256 @@
+/* ----- навигация в хедере + мобильное меню ----- */
+.menu-toggle
+	display: none
+	width: 30px
+	height: 22px
+	position: relative
+	@include max-screen($xl)
+		display: block
+
+
+.menu-ic
+	width: 100%
+	height: 2px
+	margin-top: -1.5px
+	border-radius: 15px
+	background-color: $black
+	position: absolute
+	top: 50%
+	left: 0
+	z-index: 10
+	transition: all .25s
+	&::before, &::after  
+		content: ""
+		width: 100%
+		height: 2px
+		position: absolute
+		left: 0
+		border-radius: 15px
+		background-color: $black
+		transition: all .25s					
+	&::before
+		top: -9px
+	&::after 
+		top: 9px
+
+
+.top-menu
+	display: flex
+	align-items: center
+	max-width: 100%
+	&__list
+		display: flex
+		> li:not(:last-child)
+			margin-right: 1.6em
+		.active
+			a
+				color: $accent
+		li
+			position: relative
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 39px
+			&:hover
+				color: $accent
+	.btn-close
+		display: none
+		position: absolute
+		top: 1em
+		right: 26px
+
+@media screen and (min-width: 1200px)
+	.top-menu__list li:hover .sublist
+		display: block
+
+.config-link
+	a
+		padding: .1em 1.1em
+		background-color: #f4f4f4
+		&:hover
+			color: #0064a4
+	.sublist
+		a
+			background: none
+
+.controls-block
+	display: flex
+
+
+.sublist
+	min-width: 258px
+	position: absolute
+	z-index: 2
+	top: 100%
+	left: 50%
+	transform: translateX(-50%)
+	margin-top: 10px
+	padding: 24px 0 15px
+	line-height: 1.15
+	background: $white
+	box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.22)
+	display: none
+	&::before
+		content: ''
+		display: block
+		width: 10px
+		height: 10px
+		position: absolute
+		top: -5px
+		left: 50%
+		margin-left: -5px
+		background: $white
+		transform: rotate(45deg)
+	&::after
+		content: ''
+		width: 100%
+		height: 30px
+		position: absolute
+		top: -10px
+		left: 0
+	a
+		display: block
+		padding: 0.6em 1.9em
+		height: auto
+		&:hover
+			color: #0064a4
+			background-color: $bg-color
+	
+
+.mob-toggle
+	display: none
+	position: relative
+	width: 8px
+	height: 14px
+	background: url('../img/ic-arrow.svg') no-repeat 50% 50% / 100%
+	transform: rotate(90deg)
+	position: absolute
+	right: 30px
+	top: .8em
+	@include trs(.1s)
+	&.active
+		transform: rotate(-90deg)
+	
+	
+.header__line 
+	.top-menu
+		margin-left: 4.5%
+		flex: 1
+		margin-top: 6px
+		&__list
+			flex: 1
+			max-width: 100%
+	.config-link
+		margin-left: auto
+
+
+@include max-screen($xxl)
+	.header__line .top-menu
+		margin-left: 3.5%
+	.top-menu__list > li:not(:last-child)
+		margin-right: 1.2em
+
+
+@include max-screen($xl)
+	.top-menu
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 99
+		width: 100%
+		max-width: 500px
+		padding-top: 2em
+		background: $white
+		box-shadow: 0 0 29px rgba(0, 0, 0, 0.17)
+		font-size: 26px
+		will-change: transform
+		transform: translate3d(-100%, 0, 0)
+		opacity: 0
+		visibility: hidden
+		transition: all 0.4s linear
+		&__list
+			display: block
+			> li
+				padding: .3em 0 .3em .65em 
+				> a
+					display: inline-flex
+					margin-right: 15px
+					height: auto
+					padding: .1em 0.55em
+					font-weight: 700
+					justify-content: flex-start
+			.active
+				> a
+					background-color: #f4f4f4
+
+			li:not(:last-child)
+				margin-right: 0
+
+			.sublist
+				width: calc(100% + .65em)
+				margin: .4em 0 0 -.65em
+				padding: 0
+				position: static
+				transform: none
+				box-shadow: none
+				&::before, &::after
+					display: none
+				a
+					padding: 0.3em 1.2em
+					color: $black
+
+		.controls-block
+			margin-top: 1.5em
+			padding-top: 1.5em
+			padding-left: 1.25em
+			border-top: 2px solid #f3f3f3
+			flex-direction: row-reverse
+			justify-content: flex-end
+			// align-items: center
+			.search
+				&__form
+					left: 0
+					right: auto
+				&__toggle
+					font-size: .55em
+			.search, .lang, .login
+				margin: 0 1.25em 0 0
+			.lang
+				transform: translateY(.15em)
+				a
+					display: block
+					line-height: 1
+
+		.btn-close
+			display: block
+
+
+	.header__line 
+		.top-menu
+			margin: 0
+
+
+	.menu-expanded 
+		.top-menu
+			transform: translate3d(0, 0, 0)
+			opacity: 1
+			visibility: visible
+		.menu-toggle
+			opacity: 0
+
+
+	.mob-toggle
+		display: inline-block
+
+
+@include max-screen($md)
+	.top-menu
+		font-size: 20px
+
+
+@include max-screen($sm)
+	.top-menu
+		max-width: 350px

@@ -1,0 +1,71 @@
+- var page = "404"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page.page-error
+
+				.breadcrumbs
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.page-error__title.h1.page-title 
+						div Иногда бывает, что что-то идёт не так.
+						div Сейчас как раз такой случай.
+
+					.text-2.no-margins
+						p Такой страницы нет,  и вероятно, никогда и не было!
+						p Рекомендуем налить чаю и вернуться 
+							a(href="/") на главную.
+
+					.page-error-images.flex
+						.page-error-img
+							img(src="img/img-404.jpg", alt="alt")
+						.page-error-img.page-error-subimg
+							img(src="img/img-404-el.jpg", alt="alt")
+
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+
