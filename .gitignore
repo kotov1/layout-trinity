@@ -1,6 +1,7 @@
 /node_modules/
 /dist/
 /files/
+/temp/
 /.git/
 /package-lock.json
 /app/css/
