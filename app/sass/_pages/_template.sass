@@ -312,7 +312,11 @@
 		justify-content: center
 		margin: 0 0 -1px -1px
 		padding: 15px
-		border: 1px solid $bd-color
+		&:not(.others-link)
+			border: 1px solid $bd-color
+	.others-link
+		
+	
 
 @include max-screen($xxl)
 	.partners-list li

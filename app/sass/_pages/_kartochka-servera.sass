@@ -1,0 +1,328 @@
+/* ------------------------------------- 
+	страница Карточка сервера
+	------------------------------------- */
+
+
+.server-hero
+
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 342px
+		border: 1px solid $bd-color
+		img
+			max-height: 100%
+	&__main
+		padding: 40px
+	&__add
+		flex-direction: column
+		padding: 30px
+		img:not(:last-child)
+			margin-bottom: 60px
+
+
+
+
+
+
+.server-price
+	height: 100%
+	border: 2px solid $accent
+	&__top
+		padding: 35px 10% 25px
+	&__title
+		font-size: 28px
+		margin-bottom: .6em
+	.btn
+		width: 100%
+		height: 62px
+	&__link
+		display: block
+		padding: 17px 40% 16px 10%
+		border-top: 1px solid $bd-color
+		color: $accent
+
+
+
+
+.server-descr
+	padding: 45px 0
+
+
+
+.server-support
+	padding: 50px 0 20px
+	background-color: $accent
+	color: $white
+	&-item
+		margin-bottom: 30px
+		padding-right: 20px
+		&__title
+			display: block
+			color: #b2c7e0
+
+
+
+.server-delivery
+	.text-2
+		padding-right: 25px
+	a
+		color: $accent
+
+
+
+
+
+
+.config-info
+	width: 296px
+	padding: 104px 50px 45px
+	background-color: $accent
+	color: $white
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		display: block
+		font-size: 10px
+		width: 19.4em
+		height: 13em
+		position: absolute
+		left: 50%
+		top: 0
+		transform: translate(-50%, -35%)
+		z-index: 0
+		background: url('../img/el-block-bg-3.png') no-repeat 0 0
+		background-size: 100%
+
+.tech-data .config-info
+	position: absolute
+	right: 0
+	bottom: 0
+	
+
+
+
+
+@include max-screen($xl)
+	.server-hero
+		.col-1-2
+			width: 66.66666%
+		.col-1-4
+			width: 33.33333%
+			&:last-child
+				width: 66.66666%
+				margin-top: 26px
+
+
+	.server-price__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 25px
+		padding-left: 30px
+		padding-right: 30px
+		.btn
+			width: 227px
+	.server-price__title
+		margin-bottom: 0
+	.server-price__link
+		padding-left: 30px
+		padding-right: 30px
+
+
+
+	.config-info
+		width: 100%
+		height: 215px
+		margin-top: 45px
+		align-items: center
+		padding: 30px 30px 30px 300px
+		&:not(.mob-hidden)
+			display: flex
+		&::before
+			left: 50px
+			top: 50%
+			transform: translate(0, -50%)
+
+	.tech-data .config-info
+		position: relative
+
+
+	.server-support
+		.col-1-4
+			width: 33.33333%
+	
+
+
+@include max-screen($lg)
+
+	.server-hero .col-1-4:last-child
+		width: 100%
+
+	.server-support
+		.col-1-4
+			width: 50%
+
+	.server-delivery
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-3
+			width: 100%
+			&:not(:last-child)
+				margin-bottom: 30px
+	.server-delivery .text-2
+		padding-right: 0
+
+
+@include max-screen($md)
+	.server-hero
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			width: 100%
+			padding: 0
+		.col-1-2
+			margin-bottom: 26px
+	.server-hero__main
+		height: 260px
+	.server-hero__add
+		height: 175px
+		flex-direction: row
+		justify-content: space-between
+	.server-hero__add img:not(:last-child)
+		margin: 0 30px 0 0
+
+
+	.server-price__top .btn
+		width: 200px
+
+
+	.config-info
+		height: 170px
+		padding-left: 215px
+		&::before
+			font-size: 8px
+			left: 30px
+
+
+
+@include max-screen($sm)
+	.server-hero__img
+		padding: 30px 15px
+	.server-hero__main
+		height: 246px
+	.server-hero__add
+		height: 246px
+		flex-direction: column
+	.server-hero__add img:not(:last-child)
+		margin: 0 0 30px 0
+
+	.server-price__top
+		display: block
+		padding-left: 15px
+		padding-right: 15px
+		text-align: center
+	.server-price__title
+		margin-bottom: 0.6em
+	.server-price__top .btn
+		width: 100%
+		max-width: 300px
+	.server-price__link
+		padding-left: 15px
+		padding-right: 15px
+
+	.server-support-item
+		padding-right: 0
+		.nowrap
+			white-space: normal
+
+
+@include max-screen(439px)
+	.config-info
+		height: 160px
+		padding-left: 145px
+		padding-right: 15px
+		&::before
+			font-size: 6px
+			left: 15px
+
+
+
+
+
+
+.server-feautures
+	margin-top: 45px
+	padding: 45px 0
+	background-color: $bg-color
+
+	&__unordered
+		margin-bottom: 55px
+
+	&__ordered
+		counter-reset: li
+
+	&__item
+		margin-bottom: 55px
+		padding-right: 15px
+		&::before
+			counter-increment: li
+			content: counter(li)'.'
+			display: block
+			font: 800 38px/1 $title-font
+			letter-spacing: -0.025em 
+			margin-bottom: .3em
+
+
+	.config-info
+		position: absolute
+		top: 0
+		right: 0
+
+
+.server-feautures__empty
+
+@include max-screen($xl)
+	.server-feautures__empty
+		display: none
+
+@include max-screen($lg)
+	.server-feautures__unordered
+		.col-1-4
+			width: 33.33333%
+	.server-feautures__ordered
+		.col-1-4
+			width: 33.33333%
+
+@include max-screen($md)
+	.server-feautures__unordered
+		.col-1-4
+			width: 50%
+	.server-feautures__ordered
+		.col-1-4
+			width: 50%
+
+@include max-screen($sm)
+	.server-feautures__unordered
+		margin-bottom: 45px
+	.server-feautures__item
+		margin-bottom: 45px
+		padding-right: 0
+
+
+
+
+
+
+
+
+
+
+
+

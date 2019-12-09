@@ -84,6 +84,14 @@ $(function() {
    });
 
 
+   // развернуть ещё
+   $('.readmore-btn').click(function () { 
+	   $(this).closest('.readmore').find('.readmore-hidden').slideToggle(200);
+	   $(this).toggleClass('readmore-btn--active');
+   });
+
+
+
 
 
 });

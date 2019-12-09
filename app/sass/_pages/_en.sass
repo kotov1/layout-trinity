@@ -2,12 +2,6 @@
 	страница En
 	------------------------------------- */
 
-.header-en
-	.logo
-		margin-right: auto
-	.lang
-		margin-left: 45px
-
 .page-en
 	.hero
 		padding: 75px 0 75px 72px
@@ -33,22 +27,74 @@
 
 
 
+.en-section-title
+	padding-left: 72px
+
+
+
+.en-block
+	height: 100%
+	padding: 55px 15px 55px 70px
+
+	&-customers
+		background-color: $bg-color
+		.text-2 
+			margin-bottom: 1em
+
+	&-contacts
+		background: $gradient
+		color: $white
+		.text-2
+			margin-bottom: .5em
+		.text-1
+			line-height: 1.2
+		.text-1:not(:last-child)
+			margin-bottom: 1.2em
 
 
 
 
+@include max-screen($xl)
+	.page-en .hero
+		padding: 50px
+
+	.en-section-title
+		padding-left: 0
+
+	.competences
+		padding: 45px 30px 20px
+
+	.en-block
+		padding: 30px
 
 
+@include max-screen($lg)
 
+	.competences .info-item
+		width: 33.33333%
 
+	.en-block
+		height: auto
 
+@include max-screen($md)
 
+	.page-en .hero .h1
+		font-size: 40px
 
+	.competences 
+		padding: 0
+		box-shadow: none
+		.info-item
+			width: 50%
 
+@include max-screen($sm)
+	.page-en .hero
+		padding: 30px 15px
+	
+@include max-screen(360px)
 
-
-
-
+	.page-en .hero .h1
+		font-size: 34px
 
 
 

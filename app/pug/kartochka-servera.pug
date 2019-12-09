@@ -1,0 +1,243 @@
+- var page = "kartochka-servera"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='Продукты', href='#')
+									span Продукты
+							li
+								a(title='Серверное оборудование', href='#')
+									span Серверное оборудование
+							li
+								a(title='Серверы Supermicro / Тринити', href='#')
+									span Серверы Supermicro / Тринити
+							li
+								a(title='Многофункциональные серверы среднего уровня', href='#')
+									span Многофункциональные серверы среднего уровня
+							li
+								span E210C-M5
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Сервер E210C-M5
+
+					.server-hero
+						.f-row
+							.cols.col-1-2
+								.server-hero__img.server-hero__main
+									img(src="img/img-server-1.jpg", alt="alt")
+							.cols.col-1-4
+								.server-hero__img.server-hero__add
+									img(src="img/img-server-2.jpg", alt="alt")
+									img(src="img/img-server-3.jpg", alt="alt")
+							.cols.col-1-4
+								.server-price
+									.server-price__top
+										.server-price__title.h3 Цена по запросу
+										button.btn.btn--color(type="button") Отправить запрос
+									.server-price__links.text-2
+										a.server-price__link(href="#") Сконфигурировать самому
+										a.server-price__link(href="#") Проконсультироваться 
+											span.nowrap у специалиста
+
+					// /.server-hero
+
+
+					.block-padding
+						.row-col
+							p.text-1.text-col-2 Эта машина сочетает высокую производительность двух процессоров и до 256ГБ ОЗУ с весьма демократичной ценой.
+							p.text-2 Она может использоваться в качестве терминального сервера на несколько десятков пользователей, узла отказоустойчивого кластера СУБД или Exchange, узла вычислительного кластера (HPC), а так же в качестве "числодробилки" для задач видеорендеринга или транскодирования. 
+
+
+				// /.container
+
+
+				
+
+				.tech-data
+					.container
+						.h2 Технические характеристики
+						.p-relative
+							.block-col
+								ul.tech-data__list.text-2.list
+									li
+										.dotted 
+											span Процессор 	
+										div Два Intel Xeon E5 (TDP не более 130Вт) 
+									li
+										.dotted  
+											span ОЗУ
+										div До 512ГБ DDR3 ECC REG 
+									li
+										.dotted  	
+											span Чипсет
+										div Intel® C602 
+									li
+										.dotted 	
+											span Жесткие диски 
+										div 
+											p До 4шт SATA HDD
+											p При установке опционального RAID контроллера - до 4шт SAS HDD (или комбинация SAS-SATA) 
+									li
+										.dotted 
+											span RAID контроллер
+										div 
+											p Полноценный аппаратный RAID-контроллер: Adaptec RAID / LSI RAID
+											p Для подключения внешних СХД опционально поставляются:
+											p — SAS HBA LSISAS3442E-R
+											p — FC HBA Qlogic QLE2460 (однопортовый 4Гбит/с, LC multimode)
+											p — FC HBA Qlogic QLE2462 (двухпортовый 4Гбит/с, LC multimode) 
+									li
+										.dotted  	
+											span Сеть
+										div 2 x Gigabit Ethernet (RJ45) 
+									li
+										.dotted 
+											span Слоты расширения
+										div Один PCI-Eх8 (может быть занят RAID контроллером) 
+									li
+										.dotted 
+											span Питание
+										div Одиночный 440-480Вт блок питания, 220В 50Гц 
+									li
+										.dotted 
+											span Габариты
+										div 19" 1U, 437х503х43мм (ШхГхВ) 
+									li
+										.dotted 
+											span Управление
+										div SuperDoctorIII, Adaptec Storage Manager Удаленное управление IPMI с функциями KVM-Over-LAN и Virtual Media over LAN 
+									li
+										.dotted 
+											span Интегрированные устройства
+										div 2xUSB2.0, 6xSATA, Video, PS/2 KB/Mouse 
+								// /.tech-data__list
+
+							.config-info.text-2.mob-hidden
+								p Данный сервер можно сконфигурировать, заменив любые детали на подходящие вам.
+
+
+				// .tech-data
+
+				.container
+					.config-info.text-2.desktop-hidden
+						p Данный сервер можно сконфигурировать, заменив любые детали на подходящие вам.
+
+
+
+				.server-descr
+					.container
+						.h2 Описание
+						.block-col.text-2
+							p Одна из особенностей данной модели - малая глубина корпуса, позволяющая установку в шкафы 19" глубиной 600мм. По желанию Заказчика машина комплектуется адаптерами SAS или Fibre Channel, позволяющими подключать мощные отказоустойчивые внешние системы хранения данных.
+							p Сервер может эксплуатироваться совместно как с СХД начального уровня, так и системами среднего класса (IBM, HDS, Sun, NetApp), объединенных в SAN. Если Вам необходимо наличие дублированных блоков питания, расширенные возможности удаленного управления (IPMI) или больший объем ОЗУ, рекомендуем обратить внимание на модель E210-M4 
+				// /.server-descr
+
+
+
+
+				.server-support
+					.container
+						.h2 Техподдержка
+						ul.server-support__list.list.f-row
+							li.cols.col-1-4
+								.server-support-item
+									.info-item__ic
+										img(src="img/ic-info-white-1.png", alt="alt")
+									p.text-2 Стандартные 
+										span.nowrap гарантийные условия.
+							li.cols.col-1-4
+								.server-support-item
+									.info-item__ic
+										img(src="img/ic-info-white-2.png", alt="alt")
+									p.text-2 
+										span.server-support-item__title Онлайн-форум: 
+										a(href="#", target="_blank", rel="noopener") www.3nity.ru
+							li.cols.col-1-4
+								.server-support-item
+									.info-item__ic
+										img(src="img/ic-info-white-3.png", alt="alt")
+									p.text-2 
+										span.server-support-item__title Сервисные центры и офисы: 
+										| Москва, Санкт-Петербург, Екатеринбург, другие регионы.
+							li.cols.col-1-4
+								.server-support-item
+									.info-item__ic
+										img(src="img/ic-info-white-4.png", alt="alt")
+									p.text-2 
+										span.server-support-item__title Документация, прошивки и ПО: 
+										| платформа, ASR2405, ASR5405, LSISAS3442E-R, QLE2460, QLE2462.
+
+				// /.server-support
+
+
+				.server-delivery.section-padding
+					.container
+						.h2 Поставки
+						.f-row
+							.cols.col-1-3
+								p.text-2 Приобрести сервер можно в любом из&nbsp;наших офисов в Москве, Санкт-Петербурге, Екатеринбурге и Новосибирске. Жители других городов могут заказать доставку курьерской службой «до дверей».
+							.cols.col-1-3
+								p.text-2 Срок изготовления - стандартно 1-2 недели, уточняйте у наших менеджеров. Продажа осуществляется только по безналичному расчету. Стоимость сервера можно рассчитать самостоятельно, воспользовавшись конфигуратором, либо обратиться к нашим специалистам.  Цены в конфигураторе - лист-прайс, скидки обсуждаются индивидуально.
+							.cols.col-1-3
+								p.text-2 Любые технические вопросы по серверу, а также вопросы конфигурирования системы в соответствии с Вашей задачей, Вы можете задать нашим специалистам 
+									a(href="#") (см. раздел Техническая поддержка). 
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

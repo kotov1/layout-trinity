@@ -9,6 +9,13 @@
 		.menu-toggle
 			margin-right: 4%
 
+.header-en
+	.logo
+		margin-right: auto
+	.lang
+		margin-left: 45px
+
+
 
 .container--wide .header__line 
 	padding: 0 15px
@@ -32,15 +39,21 @@
 
 		> .tel-link
 			margin-top: .4em
+	
+	.header-en .header__line > .tel-link
+		margin-top: 0
 
 @include max-screen($sm)
 	.header__line 
 		.logo
 			width: 41%
 			max-width: 160px
-			height: auto
+			// height: auto
 		.tel-link
 			font-size: 18px
+
+	.header-en .lang
+		margin-left: 15px
 
 @include max-screen(380px)
 	.header__line 

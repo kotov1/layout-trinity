@@ -1,0 +1,242 @@
+/* ------------------------------------- 
+	страница Список серверов
+	------------------------------------- */
+
+.servers-hero
+	padding: 30px 0
+	.f-row
+		align-items: center
+	&__imgs
+		align-items: center
+		justify-content: space-between
+		padding: 40px 75px
+		background: $white
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.05)
+
+
+
+.servers-list
+	margin-top: 30px
+.servers-item
+	height: 340px
+	margin-bottom: 26px
+	border: 1px solid #eee
+	@include trs(.1s)
+	&:hover
+		box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+	&__img
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 220px
+		margin-bottom: 15px
+		padding: 15px
+		img
+			max-height: 100%
+
+	&__text
+		padding: 0 55px
+
+
+
+
+
+.servers-blocks
+	padding: 77px 0
+	background-color: $accent
+
+.servers-block-config
+	height: 100%
+	padding: 75px 65px
+	background: $white url('../img/el-block-bg-2.png') no-repeat 100% 50%
+	.h1 
+		margin-bottom: 22px
+		.fz-bigger
+			display: block
+			font-size: 1.645833333333333em
+			line-height: .6
+			color: $accent
+	.text-2
+		opacity: 0.6
+
+
+.servers-block-consult
+	height: 100%
+	padding: 75px 46% 75px 65px
+	background: url('../img/el-block-bg-1.png'), $gradient
+	background-repeat: no-repeat
+	background-position: 100% 100%, 0 0
+	color: $white
+	.h3
+		margin-bottom: .5em
+
+
+
+
+
+.servers-info
+	overflow: hidden
+	border-bottom: 1px solid $bd-color
+
+	&-item
+		margin-bottom: 50px
+		padding-right: 40px
+		&__title
+			min-height: 2.67em
+			font-weight: 700
+			margin-bottom: .6em
+		a
+			color: $accent
+	&-list
+		li:not(:last-child)
+			margin-bottom: .9em
+
+.servers-sertificates
+	padding: 60px 100px 60px 60px
+	background-color: #63de9d
+	color: $white
+	position: relative
+	&::after
+		content: ''
+		display: block
+		width: 50vw
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		z-index: -1
+		background-color: #63de9d
+
+	.servers-info-list li:not(:last-child)
+		margin-bottom: 0.5em
+
+
+
+@include max-screen($xl)
+
+	.servers-hero
+		background-color: $bg-color
+		padding-left: 30px
+		padding-right: 30px
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-2
+			width: 100%
+		&__imgs
+			display: none
+
+	.servers-item__text
+		padding: 0 15px
+
+
+	.servers-blocks
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-2
+			width: 100%
+	.servers-block-config, .servers-block-consult
+		padding: 50px
+	.servers-block-config 
+		.h1
+			.fz-bigger
+				font-size: 1.5em
+	.servers-block-consult
+		margin-top: 30px
+		background-size: auto 100%, 100%
+
+
+
+	.servers-info
+		border-bottom: none
+		.col-1-2
+			width: 100%
+		.col-1-4
+			width: 33.33333%
+
+	.servers-sertificates
+		&::after
+			display: none
+
+
+
+@include max-screen($lg)
+	.servers-list
+		.col-1-3
+			width: 50%
+	.servers-item
+		height: 290px
+		&__img
+			height: 190px
+
+
+
+@include max-screen($md)
+	.servers-info .col-1-4
+		width: 50%
+	.servers-info-item
+		padding-right: 0
+
+	.servers-block-config
+		padding: 30px
+	
+	.servers-blocks
+		padding: 50px 0
+	.servers-block-config, .servers-block-consult
+		padding: 30px 40% 30px 30px
+	.servers-block-config 
+		background-size: 20% auto
+		background-position: 100% 100%
+		.h1
+			font-size: 40px
+			.fz-bigger
+				font-size: 1em
+	.servers-block-consult
+		background-size: 35% auto, 100%
+
+
+
+@include max-screen($sm)
+	.servers-hero
+		width: calc(100% + 30px)
+		margin-left: -15px
+		padding: 20px 15px
+
+	.servers-list
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-3
+			width: 100%
+	.servers-item
+		max-width: 360px
+		height: auto
+		margin-left: auto
+		margin-right: auto
+		padding: 20px 15px
+	.servers-item__img
+		height: auto
+
+	.servers-block-config, .servers-block-consult
+		padding: 20px 40% 20px 15px
+	.servers-block-config .h1
+		font-size: 36px
+	.servers-block-consult .h3
+		line-height: 1
+		font-size: 30px
+
+	.servers-sertificates
+		width: calc(100% + 30px)
+		margin-left: -15px
+		padding: 20px 15px
+
+
+
+

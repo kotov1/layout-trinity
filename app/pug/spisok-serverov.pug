@@ -1,0 +1,265 @@
+- var page = "spisok-serverov"
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='Продукты', href='#')
+									span Продукты
+							li
+								a(title='Серверное оборудование', href='#')
+									span Серверное оборудование
+							li
+								span Серверы Supermicro / Тринити
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Серверы Supermicro / Тринити
+
+
+					.servers-hero
+
+						.f-row
+							.cols.col-1-2
+								.text-1
+									p Надежные и высокопроизводительные серверы «Тринити» производятся на базе серверных платформ SUPERMICRO и оборудования INTEL.
+							.cols.col-1-2
+								.servers-hero__imgs.flex
+									.servers-hero__img
+										img(src="img/logo-servers-1.jpg", alt="alt")
+									.servers-hero__img
+										img(src="img/logo-servers-2.jpg", alt="alt")
+									
+
+					// /.servers-hero
+
+
+					.servers-list.list
+						.f-row
+							.cols.col-1-3
+								.servers-item
+									a(href="#")
+										.servers-item__img
+											img(src="img/img-servers-1.jpg", alt="alt")
+										.servers-item__text.text-2
+											p Серверы на базе платформ Intel®
+							.cols.col-1-3
+								.servers-item
+									a(href="#")
+										.servers-item__img
+											img(src="img/img-servers-2.jpg", alt="alt")
+										.servers-item__text.text-2
+											p Серверы начального уровня и файл-серверы
+							.cols.col-1-3
+								.servers-item
+									a(href="#")
+										.servers-item__img
+											img(src="img/img-servers-3.jpg", alt="alt")
+										.servers-item__text.text-2
+											p Многофункциональные серверы среднего уровня
+							.cols.col-1-3
+								.servers-item
+									a(href="#")
+										.servers-item__img
+											img(src="img/img-servers-4.jpg", alt="alt")
+										.servers-item__text.text-2
+											p Серверы сетевого хранения данных (NAS – Network Attached Storage)
+							.cols.col-1-3
+								.servers-item
+									a(href="#")
+										.servers-item__img
+											img(src="img/img-servers-1.jpg", alt="alt")
+										.servers-item__text.text-2
+											p Высокопроизводительные серверы
+
+
+					// /.servers-list
+
+
+				// /.container
+
+				.servers-blocks
+
+					.container
+
+						.f-row
+							.cols.col-1-2
+								.servers-block-config
+									.h1 Конфигуратор
+										span.fz-bigger серверов
+									.text-2
+										p Сконфигурируйте сервер под свои цели и задачи
+							.cols.col-1-2
+								.servers-block-consult
+									.h3 Консультация у&nbsp;специалиста
+									.text-2
+										p Проконсультируем вас по&nbsp;любым вопросам
+				
+
+				// /.servers-blocks
+
+
+
+
+				.servers-info.section-padding
+					.container
+
+						.f-row
+
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-10.png", alt="alt")
+									.servers-info-item__title.text-2 Оперативная сборка 
+									ul.servers-info-list.list
+										li Высокая доступность необходимых комплектующих
+										li Тринити располагает 2 производственными площадками мощностью до 15 000 серверов в год 
+										
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-11.png", alt="alt")
+									.servers-info-item__title.text-2 Высокое качество сборки 
+									ul.servers-info-list.list
+										li Менее 2% гарантийных случаев
+										li Строго выверенные производственные процессы мониторинг состояния оборудования на всех этапах производства силами 
+										
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-12.png", alt="alt")
+									.servers-info-item__title.text-2 Полное тестирование компонентов 
+									ul.servers-info-list.list
+										li Автоматическая прошивка;
+										li Разметка дисков и создание массивов;
+										li Установка ОС, драйверов и ПО для тестов;
+										li Проверка оборудования под высокой нагрузкой;
+										li Автоматизированные тесты без установки ОС и другое.
+										
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-13.png", alt="alt")
+									.servers-info-item__title.text-2 Высокое качество сборки 
+									ul.servers-info-list.list
+										li С сервисным обслуживанием в 42 городах России и СНГ
+										li 
+											a(href="#") Сервисные центры
+										li 
+											a(href="#") Стандартные гарантийные условия
+										li 
+											a(href="#") Расширенное сервисное обслуживание 
+										
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-14.png", alt="alt")
+									.servers-info-item__title.text-2 Поставка по всей России и&nbsp;СНГ 
+									ul.servers-info-list.list
+										li Возможен самовывоз 
+
+							.cols.col-1-4
+								.servers-info-item
+									.info-item__ic
+										img(src="img/ic-info-4.png", alt="alt")
+									.servers-info-item__title.text-2 На выходе каждый сервер снабжен: 
+									ul.servers-info-list.list
+										li 
+											a(href="#") Системой мониторинга Тринити для предупреждения неполадок в системе.
+										li
+											a(href="#") Техподдержка
+
+							.cols.col-1-2
+								.servers-sertificates
+									.text-1 Компания «Тринити» имеет следующие сертификаты: 
+									ul.servers-info-list.list
+										li 
+											a.download-link.download-jpg(href="#", download) Сертификат на производство серверов
+										li 
+											a.download-link.download-jpg(href="#", download) Декларация Минсвязи
+										li 
+											a.download-link.download-jpg(href="#", download) Сертификат соответствия таможенного союза
+
+
+				// /.servers-info
+
+
+
+				.servers-about.section-padding
+					.container
+						.block-col.readmore
+							.text-1 Мы дистрибутор  и сертифицированный партнер  SUPERMICRO. 
+							.text-2 
+								p Специалисты компании  «Тринити» обладают знаниями и сертификатами, которые подтверждают высокий уровень экспертизы по продуктам и решениям Supermicro. 
+								p Мы проектируем и развертываем ИТ-инфраструктуру любой сложности и масштаба. В рамках партнерских отношений, мы готовы предложить вам серверное оборудование Supermicro и техническую поддержку самого высокого уровня. 
+							.readmore-hidden
+								.text-2 
+									p Специалисты компании  «Тринити» обладают знаниями и сертификатами, которые подтверждают высокий уровень экспертизы по продуктам и решениям Supermicro. 
+									p Мы проектируем и развертываем ИТ-инфраструктуру любой сложности и масштаба. В рамках партнерских отношений, мы готовы предложить вам серверное оборудование Supermicro и техническую поддержку самого высокого уровня. 
+							button.readmore-btn(type="button") Развернуть ещё
+
+
+				// /.servers-about
+
+
+
+
+
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

@@ -84,11 +84,13 @@
 	color: $accent
 
 .list
-	margin: 0
 	padding: 0
 	list-style: none
+	&:not(.f-row)
+		margin: 0
 
-
+.p-relative
+	position: relative
 
 
 
@@ -116,6 +118,9 @@ h3, .h3
 	font-size: 30px
 	line-height: 1.15
 
+.section-subtitle
+	margin-top: -0.6em
+	margin-bottom: 1em !important
 
 
 
@@ -184,7 +189,7 @@ ol.text-list
 	padding-top: 65px
 
 .block-padding
-	padding-top: 30px
+	padding-top: 35px
 
 .bg-section
 	margin-top: 45px
@@ -199,6 +204,9 @@ ol.text-list
 
 .text-col
 	max-width: 700px
+
+.text-col-2
+	max-width: 750px
 
 
 
@@ -365,7 +373,7 @@ ol.text-list
 	&-btn
 		position: relative
 		margin-bottom: .3em
-		padding: .5em 2em .5em 1em
+		padding: 16px 2em 16px 1em
 		background-color: $bg-color
 		color: $accent
 		cursor: pointer
@@ -405,6 +413,15 @@ ol.text-list
 		position: relative
 		z-index: 1
 
+	&--white
+		.accordion-btn
+			background: $white
+			box-shadow: 10px 10px 52px rgba(0, 0, 0, 0.05)
+		.accordion-content
+			background-color: $white
+			box-shadow: none
+			z-index: 0
+
 
 @include max-screen($sm)
 	.accordion-content
@@ -412,9 +429,54 @@ ol.text-list
 
 
 
+.download-link
+	display: inline-flex
+	align-items: center
+	&::before
+		content: ''
+		display: block
+		margin-right: 15px
+		background-repeat: no-repeat
+		background-size: 100%
+.download-jpg
+	&::before
+		width: 32px
+		height: 15px
+		background-image: url('../img/ic-jpg-white.svg')	
 
 
 
+.readmore
+	&-hidden
+		display: none
+	&-btn
+		display: inline-flex
+		align-items: center
+		margin-top: 18px
+		font-size: 18px
+		line-height: 1
+		border-bottom: 1px dotted $accent
+		color: $accent
+		position: relative
+		&::after
+			content: ''
+			display: block
+			width: 6px
+			height: 10px
+			position: absolute
+			right: -14px
+			transform: rotate(90deg)
+			background: url('../img/ic-arrow-accent.svg') no-repeat 0 0
+			background-size: 100%
+		&:hover
+			border-bottom-color: transparent
+		&--active
+			font-size: 0
+			&::before
+				content: 'Скрыть'
+				font-size: 18px
+			&::after
+				transform: rotate(-90deg)
 
 
 
