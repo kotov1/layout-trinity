@@ -1,0 +1,233 @@
+- var page = "adresa-i-rekvizity"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='О компании', href='#')
+									span О компании
+							li
+								span Адреса и реквизиты
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Адреса и реквизиты
+
+					.tabs-wrapper
+
+						.contacts-header
+							.tabs.text-1
+								button.tab.tab--active(type="button") 
+									span Москва
+								button.tab(type="button") 
+									span Санкт-Петербург
+								button.tab(type="button") 
+									span Екатеринбург
+						
+						// /.contacts-header
+
+						
+
+						.contacts-map-wrap
+							.contacts-map-block
+								.tab-item.text-2
+									div 123458, Россия,  Москва,
+									div ул. Твардовского, д. 8
+									div Технопарк «Строгино», оф. 302
+									div.contacts-map-block__subtext Время работы: 10:00 – 18:00 
+								.tab-item.text-2
+									div 123458, Россия,
+									div ул. Твардовского, д. 8
+									div Технопарк «Строгино», оф. 302
+									div.contacts-map-block__subtext Время работы: 10:00 – 18:00 
+								.tab-item.text-2
+									div 123458
+									div ул. Твардовского, д. 8
+									div Технопарк «Строгино», оф. 302
+									div.contacts-map-block__subtext Время работы: 10:00 – 18:00 
+
+							.contacts-map#contacts-map
+
+						// /.contacts-map-wrap
+
+
+
+						.contacts-data
+						
+							.tab-item
+								.contacts-data__row.f-row
+									.cols.col-1-2
+										a.contacts-data__tel.h1(href="tel:+74952329230") +7 (495) 232-92-30
+										.contacts-emails
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:info@trinity.msk.ru") info@trinity.msk.ru 	
+												.contacts-email-descr общие вопросы
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:support@trinity.msk.ru") support@trinity.msk.ru
+												.contacts-email-descr гарантия и техническая поддержка
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:sales@trinity.msk.ru") sales@trinity.msk.ru 	
+												.contacts-email-descr отдел продаж
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:purchase@trinity.msk.ru") purchase@trinity.msk.ru
+												.contacts-email-descr отдел закупок
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:marketing@trinity.msk.ru") marketing@trinity.msk.ru
+												.contacts-email-descr отдел рекламы и маркетинга
+
+									.cols.col-1-2
+										ul.contacts-data__list.list
+											li ЗАО «ТРИНИТИ СОЛЮШНС»,
+											li Россия, 123458, г. Москва, ул. Твардовского, д.8, стр.1, пом I к 8 эт 3
+											li ИНН 7703529979, КПП 773401001,
+											li р/с 40702810319800000375
+											li в Банке ВТБ (ПАО) Г. МОСКВА
+											li к/с 30101810700000000187
+											li БИК 044525187
+											li ОКПО 74647562
+											li Телефон/факс 495 232-9230
+
+							.tab-item
+								.contacts-data__row.f-row
+									.cols.col-1-2
+										a.contacts-data__tel.h1(href="tel:+78123275960") +7 (812) 327-59-60
+										.contacts-emails
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:info@trinity.msk.ru") info@trinity.spb.ru 	
+												.contacts-email-descr общие вопросы
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:support@trinity.msk.ru") support@trinity.spb.ru
+												.contacts-email-descr гарантия и техническая поддержка
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:sales@trinity.msk.ru") sales@trinity.spb.ru 	
+												.contacts-email-descr отдел продаж
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:purchase@trinity.msk.ru") purchase@trinity.spb.ru
+												.contacts-email-descr отдел закупок
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:marketing@trinity.msk.ru") marketing@trinity.spb.ru
+												.contacts-email-descr отдел рекламы и маркетинга
+
+									.cols.col-1-2
+										ul.contacts-data__list.list
+											li ЗАО «ТРИНИТИ СОЛЮШНС»,
+											li Россия, 123458, г. Москва, ул. Твардовского, д.8, стр.1, пом I к 8 эт 3
+											li ИНН 7703529979, КПП 773401001,
+											li р/с 40702810319800000375
+											li в Банке ВТБ (ПАО) Г. МОСКВА
+											li к/с 30101810700000000187
+											li БИК 044525187
+											li ОКПО 74647562
+											li Телефон/факс 495 232-9230
+
+							.tab-item
+								.contacts-data__row.f-row
+									.cols.col-1-2
+										a.contacts-data__tel.h1(href="tel:+73433784150") +7 (343) 378-41-50
+										.contacts-emails
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:info@trinity.msk.ru") info@trinity.eburg.ru 	
+												.contacts-email-descr общие вопросы
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:support@trinity.msk.ru") support@trinity.eburg.ru
+												.contacts-email-descr гарантия и техническая поддержка
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:sales@trinity.msk.ru") sales@trinity.eburg.ru 	
+												.contacts-email-descr отдел продаж
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:purchase@trinity.msk.ru") purchase@trinity.eburg.ru
+												.contacts-email-descr отдел закупок
+											.contacts-emails__row
+												.contacts-email 
+													a(href="mailto:marketing@trinity.msk.ru") marketing@trinity.eburg.ru
+												.contacts-email-descr отдел рекламы и маркетинга
+
+									.cols.col-1-2
+										ul.contacts-data__list.list
+											li ЗАО «ТРИНИТИ СОЛЮШНС»,
+											li Россия, 123458, г. Москва, ул. Твардовского, д.8, стр.1, пом I к 8 эт 3
+											li ИНН 7703529979, КПП 773401001,
+											li р/с 40702810319800000375
+											li в Банке ВТБ (ПАО) Г. МОСКВА
+											li к/с 30101810700000000187
+											li БИК 044525187
+											li ОКПО 74647562
+											li Телефон/факс 495 232-9230
+
+
+
+						// /.contacts-data
+
+
+					// /.tabs-wrapper
+
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

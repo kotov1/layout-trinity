@@ -1,0 +1,75 @@
+/* ----- пагинация ----- */
+
+.pagination
+	// margin-top: 30px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		font-size: 18px
+		.active
+			.pagination__link
+				background: $bg-color
+				color: $black
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 3.167em
+		height: 3.167em
+		margin: -1px 0 0 -1px
+		padding-top: .2em
+		border: 1px solid $bd-color
+		color: $accent
+		&:hover
+			background: $bg-color
+			color: $black
+	&__prev, &__next
+		&::after
+			content: ''
+			display: block
+			width: 0.6666666666666667em
+			height: 1.222222222222222em
+			background: url('../img/ic-arrow.svg') no-repeat 0 0
+			background-size: 100%
+	&__prev
+		&::after
+			transform: scale(-1)
+
+
+@include max-screen($md)
+	.pagination__list
+		font-size: 16px
+
+@include max-screen($sm)
+	.pagination__list
+		font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

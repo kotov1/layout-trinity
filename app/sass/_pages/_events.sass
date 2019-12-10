@@ -1,0 +1,96 @@
+/* ------------------------------------- 
+	страница Мероприятия
+	------------------------------------- */
+
+
+.events
+
+	&-header
+		display: flex
+		align-items: flex-end
+		margin-bottom: 15px
+		.tabs
+			width: 100%
+			align-items: center
+		.ui-select
+			margin-bottom: 15px
+			margin-left: auto
+
+
+	&-list
+		.col-1-4
+			margin-bottom: 45px
+
+	&-item
+		height: 100%
+		background-color: $bg-color
+		@include trs(.1s)
+		&:hover
+			background-color: $white
+			box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+		&__img
+			width: 100%
+			height: 179px
+		&__content
+			padding: 20px 30px 30px
+
+
+
+@include max-screen($xl)
+	.events-list
+		.col-1-4
+			width: 33.33333%
+
+@include max-screen($lg)
+	.events-header
+		display: block
+		.ui-select
+			text-align: right
+	.events-list
+		.col-1-4
+			width: 50%
+
+@include max-screen($md)
+	.events-item__content
+		padding: 20px 15px 25px
+
+@include max-screen($sm)
+	.events-header
+		.ui-select
+			text-align: center
+	.events-list
+		.f-row
+			display: block
+			margin: 0
+		.cols
+			padding: 0
+		.col-1-4
+			width: 100%
+
+	.events-item
+		max-width: 360px
+		margin-left: auto
+		margin-right: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

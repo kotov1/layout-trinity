@@ -61,10 +61,11 @@ $(function() {
 	// Табы
 	$(".tab").click(function() {
 		var index = $(this).index();
-		$(this).closest('.tabs-wrapper').find(".tab").removeClass("tab--active").eq(index).addClass("tab--active");
-		$(this).closest('.tabs-wrapper').find(".tab-item").hide().eq(index).fadeIn("normal");
+		$(this).parent().find(".tab").removeClass("tab--active").eq(index).addClass("tab--active");
+		$(this).closest('.tabs-wrapper').find(".tab-item").hide();
+		$(this).closest( '.tabs-wrapper').find(".tab-item:nth-child(" + (index+1) +")" ).fadeIn("normal");
 	});
-
+	
 
 	// JS accordion
 	$('.accordion-btn').click(function() {
@@ -89,6 +90,28 @@ $(function() {
 	   $(this).closest('.readmore').find('.readmore-hidden').slideToggle(200);
 	   $(this).toggleClass('readmore-btn--active');
    });
+
+
+
+   $(".ui-select__trigger").on("click", function(event) {
+		$('html').one('click',function() {
+			$(".ui-select").removeClass("opened");
+		});
+		if( $(this).closest(".ui-select").hasClass('opened') ){
+			$(this).closest(".ui-select").removeClass("opened");
+		} else {
+			$(".ui-select").removeClass("opened");
+			$(this).closest(".ui-select").addClass("opened");
+		}
+		event.stopPropagation();
+	});
+	$(".ui-select__option").on("click", function() {
+		$(this).closest(".ui-select").find("select").val($(this).data("value"));
+		$(this).closest(".ui-select__options").find(".ui-select__option").removeClass("active");
+		$(this).addClass("active");
+		$(this).closest(".ui-select").removeClass("opened");
+		$(this).closest(".ui-select").find(".ui-select__trigger").text($(this).text());
+	});
 
 
 

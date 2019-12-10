@@ -1,0 +1,183 @@
+- var page = "produkty"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								span Продукты
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Продукты
+
+					.products-hero
+						.text-1.no-margins.text-margin
+							p Компания «Тринити» специализируется на решениях по построению ИТ-инфраструктуры для компаний любого рода деятельности и любого масштаба. 
+							p Основными составляющими такой интеграции являются аппаратные и программные продукты.
+						.text-2
+							p Имея официальные авторизации мы предлагаем как само сетевое и серверное оборудование и лицензионное программное обеспечение так и услуги по его развертыванию и внедрению на объектах заказчиков. 
+
+					// /.products-hero
+
+
+					.products-blocks
+						.products-blocks__row.f-row
+							.cols.col-1-3
+								.products-block
+									.products-block__title
+										.text-1 Серверное оборудование
+										.info-item__ic
+											img(src="img/ic-info-4.png", alt="alt")
+									ul.list
+										li Серверы Cisco
+										li Серверы Dell EMC
+										li Серверы Fujitsu
+										li Серверы HP
+										li Серверы IBM
+										li Серверы Intel
+										li Серверы Lenovo
+										li Серверы Supermicro / Тринити
+										li Серверы для 1С
+										li Trinity Refurbished
+										li Серверы Supermicro
+										li Серверы Huawei
+							.cols.col-1-3
+								.products-block
+									.products-block__title
+										.text-1 Системы хранения данных
+										.info-item__ic
+											img(src="img/ic-info-18.png", alt="alt")
+									ul.list
+										li Dell EMC
+										li Lenovo
+										li IBM
+										li Fujitsu
+										li NetApp
+										li Hitachi
+										li HP
+										li RAIDIX
+										li Trinity FlexApp™
+										li Infortrend
+										li Huawei
+							.cols.col-1-3
+								.products-block
+									.products-block__title
+										.text-1 Сетевое оборудование
+										.info-item__ic
+											img(src="img/ic-info-19.png", alt="alt")
+									ul.list
+										li Cisco
+										li Extreme Networks
+										li Huawei
+										li Dell EMC
+										li Juniper
+										li HP Networking
+										li Fortinet
+										li Check Point
+										li Fujitsu
+										li Lenovo
+										li Palo Alto Networks
+										li McAfee
+										li UserGate
+							.cols.col-1
+								.products-block
+									.products-block__title
+										.text-1 Программное<br> обеспечение
+										.info-item__ic
+											img(src="img/ic-info-20.png", alt="alt")
+									.f-row
+										.cols.col-1-4
+											ul.list
+												li Acronis
+												li Astra Linux
+												li Citrix
+												li Commvault
+												li Corel
+												li One Identity
+												li DataCore Software
+										.cols.col-1-4
+											ul.list
+												li DataCore Software
+												li Dr.Web
+												li IBM MaaS 360
+												li Elecard
+												li IBM Netezza
+												li Infowatch
+												li Kaspersky
+										.cols.col-1-4
+											ul.list
+												li McAfee
+												li Microsoft
+												li Netwrix Auditor
+												li Positive Technologies
+												li Quest Software
+												li ScaleMP
+												li Symantec
+										.cols.col-1-4
+											ul.list
+												li TrendMicro
+												li Varonis
+												li Veeam Software
+												li Veritas Technologies
+												li VMware
+												li Zerto
+
+
+					// /.products-blocks
+
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

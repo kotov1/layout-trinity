@@ -127,12 +127,19 @@ h3, .h3
 .text-1
 	font-size: 26px
 	line-height: 1.4
+	p
+		&:not(:last-child)
+			margin-bottom: .7em
+p.text-1
 	&:not(:last-child)
 		margin-bottom: .7em
 
 .text-2
 	font-size: 18px
 	line-height: 1.35
+	
+.text-margin
+	margin-bottom: 0.7em
 
 .no-margins
 	p
@@ -195,6 +202,9 @@ ol.text-list
 	margin-top: 45px
 	padding: 45px 0
 	background-color: $bg-color
+
+.section-col
+	max-width: 1100px
 
 .block-col
 	max-width: 930px
@@ -365,7 +375,10 @@ ol.text-list
 		background-color: $bg-color
 .tab-item:not(:first-child)
 	display: none
-
+@include max-screen($md)
+	.tabs
+		.tab
+			margin: 0 15px 10px 0
 
 
 /* ----- js аккордион ----- */
@@ -446,6 +459,8 @@ ol.text-list
 
 
 
+
+/* ----- кнопка показать ещё ----- */
 .readmore
 	&-hidden
 		display: none
@@ -481,9 +496,75 @@ ol.text-list
 
 
 
+/* ----- кастомные селекты ----- */
+.ui-select
+	display: inline-block
+	position: relative
+	&__trigger
+		min-width: 6em
+		position: relative
+		display: inline-flex
+		align-items: center
+		height: 50px
+		padding: .25em 35px 0 14px
+		color: $black
+		line-height: 1
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		cursor: pointer
+		@include trs(.1s)
+		&::after
+			content: ''
+			display: inline-block
+			width: 7px
+			height: 13px
+			position: absolute
+			right: 14px
+			top: 50%
+			margin-top: -4px
+			background: url('../img/ic-arrow.svg') no-repeat 0 0 / 100%
+			transform: rotate(90deg)
+			@include trs(.1s)
+	&__options
+		display: none
+		z-index: 1
+		width: 100%
+		position: absolute
+		top: 110%
+		left: 0
+		background-color: $white
+		box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15)
+		overflow: hidden
+	&__option
+		position: relative
+		display: block
+		padding: 10px 20px
+		font-size: 16px
+		cursor: pointer
+		@include trs(.1s)
+		&:hover
+			background-color: $accent
+			color: $white
+		&.active
+			background-color: $accent
+			color: $white
+	&--grey
+		.ui-select__trigger
+			background-color: $bg-color
+	&--white
+		.ui-select__trigger
+			background-color: $white
+	&.opened
+		z-index: 1
+		.ui-select__trigger
+			&::after
+				transform: rotate(-90deg)
+		.ui-select__options
+			display: block
 
-
-
+	&__simplebar
+		max-height: 300px
 
 
 

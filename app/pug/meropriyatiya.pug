@@ -1,0 +1,296 @@
+- var page = "meropriyatiya"
+
+- var simplebar = true
+
+
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='О компании', href='#')
+									span О компании
+							li
+								span Мероприятия
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Мероприятия
+
+
+					.events-header
+						.tabs.text-1
+							button.tab.tab--active(type="button") 
+								span Все
+							button.tab(type="button") 
+								span Москва
+							button.tab(type="button") 
+								span Санкт-Петербург
+							button.tab(type="button") 
+								span Екатеринбург
+
+							.ui-select.ui-select--grey
+								span.ui-select__trigger.text-1 Все года
+								.ui-select__options.list
+									.ui-select__simplebar(data-simplebar="init", data-simplebar-auto-hide="false")
+										.ui-select__option.active Все года
+										.ui-select__option 2019
+										.ui-select__option 2018
+										.ui-select__option 2017
+										.ui-select__option 2016
+										.ui-select__option 2015
+										.ui-select__option 2014
+										.ui-select__option 2013
+										.ui-select__option 2012
+										.ui-select__option 2011
+										.ui-select__option 2010
+										.ui-select__option 2009
+										.ui-select__option 2008
+										.ui-select__option 2007
+										.ui-select__option 2006
+										.ui-select__option 2005
+
+
+					// /.events-header
+
+
+					
+
+					.events-list.list
+						.f-row
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-1.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар Тринити «Импортозамещение в ИТ. Мифы и реальность»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-2.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Cеминар «Современный подход к хранению и защите данных». Cеминар «Современный подход к хранению и защите данных».
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-3.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар «Прогнозная аналитика для повышения доходности бизнеса»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-1.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар Тринити «Импортозамещение в ИТ. Мифы и реальность»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-2.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Cеминар «Современный подход к хранению и защите данных». Cеминар «Современный подход к хранению и защите данных».
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-3.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар «Прогнозная аналитика для повышения доходности бизнеса»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-1.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар Тринити «Импортозамещение в ИТ. Мифы и реальность»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-2.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Cеминар «Современный подход к хранению и защите данных». Cеминар «Современный подход к хранению и защите данных».
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-3.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар «Прогнозная аналитика для повышения доходности бизнеса»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-1.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар Тринити «Импортозамещение в ИТ. Мифы и реальность»
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-2.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Cеминар «Современный подход к хранению и защите данных». Cеминар «Современный подход к хранению и защите данных».
+
+							.cols.col-1-4
+								.events-item
+									a(href="#")
+										.events-item__img
+											img.img(src="content/img-event-3.jpg", alt="alt")
+										.events-item__content
+											.blocks-data
+												.blocks-data__num 10 
+												.blocks-data__txt
+													span.blocks-data__date октября 2019
+													span.blocks-data__city Санкт-Петербург
+											p.text-2 Семинар «Прогнозная аналитика для повышения доходности бизнеса»
+
+
+					// /.events-list
+
+
+					.pagination
+						ul.pagination__list.list
+							li
+								a.pagination__link.pagination__prev(href="#")
+							li
+								a.pagination__link(href="#") 1
+							li
+								a.pagination__link(href="#") 2
+							li.active
+								a.pagination__link(href="#") 3
+							li
+								a.pagination__link(href="#") 4
+							li
+								a.pagination__link(href="#") 5
+							li
+								a.pagination__link.pagination__next(href="#")
+
+					// /.pagination
+
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+/* ------------------------------------- 
+	страница Адреса и реквизиты
+	------------------------------------- */
+
+.contacts
+	
+	&-header
+		margin-bottom: 15px
+
+
+	&-map-wrap
+		position: relative
+
+	&-map
+		width: 100%
+		height: 494px
+		overflow: hidden
+
+		
+
+		&-block
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			padding: 40px 68px
+			background: $white
+			box-shadow: 10px 17px 62px rgba(0, 0, 0, 0.09)
+			&__subtext
+				margin-top: .5em
+				color: rgba($black, .5)
+
+
+		.gm-style-cc, a
+			display: none !important
+
+
+
+
+
+
+	&-data
+		margin: 80px 0
+
+		&__tel
+			display: inline-block
+			margin-bottom: .3em
+			font-size: 62px
+
+		&__list
+			padding-top: 15px
+			li:not(:last-child)
+				margin-bottom: 5px
+
+
+	&-emails
+		display: table
+		&__row
+			display: table-row
+	&-email
+		display: table-cell
+		padding-top: 4px
+		padding-bottom: 4px
+		padding-right: 20px
+		color: $accent
+		&-descr
+			display: table-cell
+			padding-top: 4px
+			padding-bottom: 4px
+	
+
+
+
+
+
+@include max-screen($xl)
+	.contacts-map
+		height: 400px
+	.contacts-map-block
+		padding: 30px
+	.contacts-data__tel
+		font-size: 48px
+
+@include max-screen($lg)
+	.contacts-data__tel
+		font-size: 40px
+
+@include max-screen($md)
+
+	.contacts-map-block
+		position: static
+		margin-bottom: 30px
+		padding: 20px 15px
+		.text-2 > *:nth-child(1), .text-2 > *:nth-child(2)
+			display: inline
+			margin-right: 0.2em
+	
+	.contacts-map
+		height: 300px
+
+	.contacts-data
+		margin: 45px 0
+
+	.contacts-data__row
+		display: block
+		margin: 0
+		.cols
+			padding: 0
+		.col-1-2
+			width: 100%
+
+	.contacts-data__list
+		padding-top: 30px
+
+@include max-screen(400px)
+	.contacts-emails
+		display: block
+		&__row
+			display: block
+	.contacts-email
+		display: block
+		&-descr
+			display: block
+			margin: -5px 0 10px
+	.contacts-data__tel
+		font-size: 34px
+
+ 
+
+
+
+
+
+ 	
+ 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

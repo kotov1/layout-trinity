@@ -1,0 +1,197 @@
+- var page = "dostavka-i-oplata"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								a(title='О компании', href='#')
+									span О компании
+							li
+								span Доставка и оплата
+
+				// /.breadcrumbs
+
+
+				.container
+					.h1.page-title Доставка и оплата
+
+
+				.tabs-wrapper
+
+					.container
+						.contacts-header
+							.tabs.text-1
+								button.tab.tab--active(type="button") 
+									span Москва
+								button.tab(type="button") 
+									span Санкт-Петербург
+								button.tab(type="button") 
+									span Екатеринбург
+								button.tab(type="button") 
+									span Другие регионы
+						
+						.section-col.text-2
+							p При оформлении заказа укажите реквизиты юридического лица. Реквизиты указываются в соответствии с учредительными документами организации, которая является плательщиком и получателем заказа.
+
+
+					// /.container
+
+
+					.payments
+						.container
+							.h2 Способы оплаты
+							.f-row
+								.cols.col-1-3
+									.payments-item
+										.info-item__ic
+											img(src="img/ic-info-15.png", alt="alt")
+										p.text-1.text-bold Безналичная оплата
+										p.text-2 Если Вы оплачиваете переводом, мы сформируем счёт для оплаты с реквизитами, по которым вы сможете оплатить заказ. Денежные средства поступят на счет Тринити в течение 1–3 рабочих дней.  Если у вас возникли вопросы, напишите нам на 
+											a(href="mailto:msk@trinitygroup.ru") msk@trinitygroup.ru. 
+
+								.cols.col-1-3
+									.payments-item
+										.info-item__ic
+											img(src="img/ic-info-16.png", alt="alt")
+										p.text-1.text-bold Банковская карта
+										p.text-2 Вы можете оплатить заказ банковской картой в офисе ЗАО "Тринити Солюшнс". Документы для бухгалтерии (кассовый ордер и КП)  выдаются вместе с заказом. 
+
+								.cols.col-1-3
+									.payments-item
+										.info-item__ic
+											img(src="img/ic-info-17.png", alt="alt")
+										p.text-1.text-bold Лизинг
+										p.text-2 ТРИНИТИ предлагает клиентам финансовую модель сотрудничества на основе лизинга. Это позволяет вам использовать инновационные решения для развития своего бизнеса, не привлекая крупных единовременных капиталовложений. 
+										a(href="#", target="_blank") Подробнее о лизинге
+
+					// /.payments
+
+
+
+					.delivery
+						.container
+
+							.f-row
+
+								.cols.col-1-2
+
+									.h2 Доставка
+
+
+									.text-1.text-margin
+										.tab-item
+											p Доставка по Москве осуществляется бесплатно
+										.tab-item
+											p Доставка по Санкт-Петербургу осуществляется бесплатно
+										.tab-item
+											p Доставка по Екатеринбуру осуществляется бесплатно
+										.tab-item
+											p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, debitis.
+
+									p.text-2.text-bold Получателю заказа понадобится:
+
+									ul.text-list.list
+										li Предъявить паспорт и доверенность на получение товарно-материальных ценностей (позиций в заказе). 
+										li Доверенность должна быть заверена подписями генерального директора, главного бухгалтера и печатью (если есть).
+										li В доверенности укажите в качестве поставщика (продавца) ЗАО «ТРИНИТИ СОЛЮШНС».
+										li Подписать счет-договор.
+										li Подписать сопроводительные документы и заверить их печатью (если она есть). 
+
+								.cols.col-1-2
+									.delivery__img
+										img(src="img/img-delivery-1.jpg", alt="alt")
+					
+							.delivery-companies
+								p.text-1 Транспортной компанией
+								ul.partners-list.list.flex
+									li
+										img(src="img/logo-delivery-1.jpg", alt="alt")
+									li
+										img(src="img/logo-delivery-2.jpg", alt="alt")
+									li
+										img(src="img/logo-delivery-3.jpg", alt="alt")
+									li
+										img(src="img/logo-delivery-4.jpg", alt="alt")
+									li
+										img(src="img/logo-delivery-5.jpg", alt="alt")
+									li
+										img(src="img/logo-delivery-6.jpg", alt="alt")
+
+							// /.delivery-companies
+
+
+							.delivery-bottom
+								p.text-1 Самовывоз
+								.section-col.text-2
+									.tab-item
+										p Вы можете самостоятельно забрать оплаченный заказ в офисе ЗАО «ТРИНИТИ СОЛЮШНС» по адресу: Россия, 123458, г. Москва, ул.Твардовского, д.8, стр.1, офис 302 Территория технопарка "Строгино" 
+									.tab-item
+										p Вы можете самостоятельно забрать оплаченный заказ в офисе ЗАО «ТРИНИТИ СОЛЮШНС» по адресу: Россия, 123458, г. Санкт-Петербург, ул.Твардовского, д.8, стр.1, офис 302 Территория технопарка "Строгино" 
+									.tab-item
+										p Вы можете самостоятельно забрать оплаченный заказ в офисе ЗАО «ТРИНИТИ СОЛЮШНС» по адресу: Россия, 123458, г. Екатеринбург, ул.Твардовского, д.8, стр.1, офис 302 Территория технопарка "Строгино" 
+									.tab-item
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem vitae corporis hic assumenda enim iusto nam blanditiis eligendi maiores.
+
+								.contacts-map#contacts-map
+
+
+					// /.delivery
+
+
+
+
+
+				// /.tabs-wrapper
+
+
+				// writeform
+				include pug-modules/writeform
+				// /.writeform
+				
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+

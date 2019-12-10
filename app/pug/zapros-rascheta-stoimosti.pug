@@ -1,0 +1,155 @@
+- var page = "zapros-rascheta-stoimosti"
+
+doctype html
+html(lang="ru")
+
+	include pug-modules/head
+
+	body
+
+		.main-wrapper
+
+			// header
+			include pug-modules/header
+			// /.header
+
+			
+			.page
+
+				.breadcrumbs
+					.container
+						ul.breadcrumbs__list.list
+							li
+								a.breadcrumbs__home(title='Главная', href='/')
+							li
+								span Запрос расчета
+
+				// /.breadcrumbs
+
+
+				.container
+
+					.h1.page-title Запрос расчёта стоимости 
+
+				// /.container
+
+
+
+				.request
+					.container
+
+						.form.request-form
+							form(action="#")
+								.request-form__row
+									.input-block
+										input.input(type="text", name="name", placeholder="ФИО")
+										span.input-placeholder ФИО
+									.input-block
+										input.input(type="text", name="company", placeholder="Компания")
+										span.input-placeholder Компания
+								.input-block
+									input.input(type="text", name="activity", placeholder="Вид деятельности")
+									span.input-placeholder Вид деятельности
+								.request-form__row
+									.input-block
+										input.input(type="tel", name="tel", placeholder="Контактный телефон")
+										span.input-placeholder Контактный телефон
+									.input-block
+										input.input(type="email", name="email", placeholder="Е-мейл")
+										span.input-placeholder Е-мейл
+								.input-block
+									input.input(type="text", name="city", placeholder="Ваш город")
+									span.input-placeholder Ваш город
+
+								.form-label Выберите офис Тринити:*
+								.form-controls.form-radiobuttons
+									label.form-control.form-radio
+										input.checkbox-hidden(type="radio", name="office", val="Санкт-Петербург") 
+										span.form-control__wrap
+										span.form-control__text Санкт-Петербург
+									label.form-control.form-radio
+										input.checkbox-hidden(type="radio", name="office", val="Москва") 
+										span.form-control__wrap
+										span.form-control__text Москва
+									label.form-control.form-radio
+										input.checkbox-hidden(type="radio", name="office", val="Екатеринбург") 
+										span.form-control__wrap
+										span.form-control__text Екатеринбург
+
+								.form-label Интересуемое решение: оборудование и ПО, конфигурация или описание задачи (ОС, гипервизоры, приложения, файловые системы, требование к объему хранения, количеству пользователей, степени отказоустойчивости, к производительности, бизнес требования): 
+
+								.input-block
+									textarea.textarea.input(name="message", placeholder="Постарайтесь описать вашу задачу")
+									span.input-placeholder Сообщение
+
+								.request-form__row
+									.input-block
+										input.input(type="text", name="sum", placeholder="Ориентировочный бюджет")
+										span.input-placeholder Ориентировочный бюджет
+
+								.form-controls.form-checkboxes
+									label.form-control.form-checkbox
+										input.checkbox-hidden(type="checkbox", name="a1") 
+										span.form-control__wrap
+											svg.checkbox-check(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 14.5 11.5')
+												path(d='M20 7L12 16L8 12', fill-opacity='0', transform='matrix(1,0,0,1,-6.75,-5.75)')
+										span.form-control__text Нам необходим сайзинг и консультация эксперта
+									label.form-control.form-checkbox
+										input.checkbox-hidden(type="checkbox", name="a2") 
+										span.form-control__wrap
+											svg.checkbox-check(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 14.5 11.5')
+												path(d='M20 7L12 16L8 12', fill-opacity='0', transform='matrix(1,0,0,1,-6.75,-5.75)')
+										span.form-control__text Нам необходимо тестирование решения
+									label.form-control.form-checkbox
+										input.checkbox-hidden(type="checkbox", name="a3") 
+										span.form-control__wrap
+											svg.checkbox-check(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 14.5 11.5')
+												path(d='M20 7L12 16L8 12', fill-opacity='0', transform='matrix(1,0,0,1,-6.75,-5.75)')
+										span.form-control__text Мы хотим познакомиться с официальным представителем компании производителя в нашем регионе
+								
+
+								.captcha
+									img(src="content/demo-captcha.jpg", alt="alt")
+
+								label.checkbox
+									input.checkbox-hidden(type='checkbox', name='privacy', checked)
+									span.checkbox-wrap
+									span.checkbox-text Согласен на обработку персональных данных
+
+								button.btn.submit Отправить
+
+
+				// /.request
+
+
+
+
+
+
+
+
+			// /.page
+
+
+
+
+			// footer
+			include pug-modules/footer
+			// /.footer
+			
+
+
+
+		// /.main-wrapper
+
+
+		
+
+
+
+
+
+
+
+
+
